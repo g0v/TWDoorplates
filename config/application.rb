@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+SITE_NAME = "台灣門牌查詢"
+
 module EasyDoorplate
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
