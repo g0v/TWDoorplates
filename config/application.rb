@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+SITE_NAME = "台灣門牌查詢"
+
 module EasyDoorplate
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -19,6 +21,5 @@ module EasyDoorplate
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    SITE_NAME = "台灣門牌查詢"
   end
 end
