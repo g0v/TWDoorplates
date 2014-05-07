@@ -1,0 +1,2 @@
+class DoorplateController < ApplicationController
+end
