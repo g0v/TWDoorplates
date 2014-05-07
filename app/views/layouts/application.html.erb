@@ -8,7 +8,15 @@
 </head>
 <%= render_body_tag %> 
 
-<%= yield %>
+  <div class="container">
 
+      <%= notice_message %>
+
+      <div class="content">
+		  
+		  <%= yield %>
+		  
+      </div>
+  </div>
 </body>
 </html>
