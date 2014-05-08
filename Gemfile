@@ -42,3 +42,4 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'number_to_cn', :path => "/Users/Shiva/Projects/github/number_to_zh"
