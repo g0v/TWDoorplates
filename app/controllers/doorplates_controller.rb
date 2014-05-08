@@ -1,6 +1,7 @@
 require 'uri'
 require 'net/http'
 require 'json'
+require 'number_to_cn'
 
 class DoorplatesController < ApplicationController
   def search
@@ -16,7 +17,7 @@ class DoorplatesController < ApplicationController
     @alley = halfToFull params[:alley]
     @number = halfToFull params[:number]
     @number1 = halfToFull params[:number1]
-    @floor = params[:floor]
+    @floor = parseFloor params[:floor].to_i
     @ext = halfToFull params[:ext]
     @tk = (Time.now.to_f*1000).to_i
     @tks = 0
@@ -43,6 +44,12 @@ class DoorplatesController < ApplicationController
     @fullMap = ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"]
     unless halfString.nil? || (halfString =~ /^\d*$/) == nil
       halfString.chars.map{|x| @fullMap[x.to_i]}.inject(:+)
+    end
+  end
+  
+  def parseFloor(floor)
+    unless floor < 2
+      floor.to_cn_words
     end
   end
 end
