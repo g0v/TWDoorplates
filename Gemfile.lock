@@ -1,3 +1,8 @@
+PATH
+  remote: /Users/Shiva/Projects/github/number_to_zh
+  specs:
+    number_to_cn (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -126,6 +131,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  number_to_cn!
   rails (= 4.1.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
