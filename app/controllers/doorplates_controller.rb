@@ -9,15 +9,15 @@ class DoorplatesController < ApplicationController
     @cityCode = params[:cityCode]
     @areaCode = params[:areaCode]
     @village = params[:village]
-    @neighbor = params[:neighbor]
+    @neighbor = halfToFull params[:neighbor]
     @street = params[:street]
-    @section = params[:section]
-    @lane = params[:lane]
-    @alley = params[:alley]
-    @number = params[:number]
-    @number1 = params[:number1]
+    @section = halfToFull params[:section]
+    @lane = halfToFull params[:lane]
+    @alley = halfToFull params[:alley]
+    @number = halfToFull params[:number]
+    @number1 = halfToFull params[:number1]
     @floor = params[:floor]
-    @ext = params[:ext]
+    @ext = halfToFull params[:ext]
     @tk = (Time.now.to_f*1000).to_i
     @tks = 0
     unless @cityCode.nil? && @areaCode.nil?
@@ -35,6 +35,14 @@ class DoorplatesController < ApplicationController
     respond_to do |format|
       #format.html # search.html.erb
       format.json { render json: @result }
+    end
+  end
+  
+  private
+  def halfToFull(halfString)
+    @fullMap = ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"]
+    unless halfString.nil? || (halfString =~ /^\d*$/) == nil
+      halfString.chars.map{|x| @fullMap[x.to_i]}.inject(:+)
     end
   end
 end
