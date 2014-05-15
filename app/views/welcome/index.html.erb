@@ -1,0 +1,112 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="row column-view">
+			<div class="col-md-3 btn-group-vertical columns" id="city-code-selector">
+				<button type="button" class="btn btn-default" value="">不拘</button>
+				<button type="button" class="btn btn-default" value="63000000">臺北市</button>
+				<button type="button" class="btn btn-default" value="10003000">桃園縣</button>
+				<button type="button" class="btn btn-default" value="10004000">新竹縣</button>
+				<button type="button" class="btn btn-default" value="10018000">新竹市</button>
+				<button type="button" class="btn btn-default" value="10005000">苗栗縣</button>
+				<button type="button" class="btn btn-default" value="66000000">臺中市</button>
+				<button type="button" class="btn btn-default" value="10007000">彰化縣</button>
+				<button type="button" class="btn btn-default" value="10009000">雲林縣</button>
+				<button type="button" class="btn btn-default" value="10010000">嘉義縣</button>
+				<button type="button" class="btn btn-default" value="10020000">嘉義市</button>
+				<button type="button" class="btn btn-default" value="67000000">臺南市</button>
+				<button type="button" class="btn btn-default" value="64000000">高雄市</button>
+				<button type="button" class="btn btn-default" value="10013000">屏東縣</button>
+				<button type="button" class="btn btn-default" value="10014000">臺東縣</button>
+				<button type="button" class="btn btn-default" value="10015000">花蓮縣</button>
+				<button type="button" class="btn btn-default" value="10002000">宜蘭縣</button>
+				<button type="button" class="btn btn-default" value="65000000">新北市</button>
+				<button type="button" class="btn btn-default" value="10017000">基隆市</button>
+				<button type="button" class="btn btn-default" value="10008000">南投縣</button>
+				<button type="button" class="btn btn-default" value="10016000">澎湖縣</button>
+				<button type="button" class="btn btn-default" value="09020000">金門縣</button>
+				<button type="button" class="btn btn-default" value="09007000">連江縣</button>
+			</div>
+			<div class="col-md-3 btn-group-vertical columns" id="area-code-selector">
+				<button type="button" class="btn btn-default active" value="">不拘</button>
+				<button type="button" class="btn btn-default" value="A010">松山區</button>
+				<button type="button" class="btn btn-default" value="A020">信義區</button>
+				<button type="button" class="btn btn-default" value="A030">大安區</button>
+				<button type="button" class="btn btn-default" value="A040">中山區</button>
+				<button type="button" class="btn btn-default" value="A050">中正區</button>
+				<button type="button" class="btn btn-default" value="A060">大同區</button>
+				<button type="button" class="btn btn-default" value="A070">萬華區</button>
+				<button type="button" class="btn btn-default" value="A080">文山區</button>
+				<button type="button" class="btn btn-default" value="A090">南港區</button>
+				<button type="button" class="btn btn-default" value="A100">內湖區</button>
+				<button type="button" class="btn btn-default" value="A110">士林區</button>
+				<button type="button" class="btn btn-default" value="A120">北投區</button>
+			</div>
+			<div class="col-md-6">
+		<%= form_tag search_doorplates_path, :class => "form-horizontal", :id => "doorplate-search-form", :method => :get, :autocomplete => "off", :remote => true do %>
+			<div class="form-group">
+				<div class="col-md-4">
+					<input type="text" name="<%= :street%>" class="form-control" placeholder="路/街" autocomplete="off"/>
+				</div>
+				<label class="control-label">街道名</label>
+			</div>
+			<div class="form-group">
+				<div class="col-md-4">
+					<input type="number" pattern="[0-9]*" name="<%= :section%>" class="form-control" placeholder="段" autocomplete="off"/>
+				</div>
+				<label class="control-label">段</label>
+			</div>
+			<div class="form-group">
+				<div class="col-md-4">
+					<input type="number" pattern="[0-9]*" name="<%= :lane%>" class="form-control" placeholder="巷" autocomplete="off"/>
+				</div>
+				<label class="control-label">巷</label>
+			</div>
+			<div class="form-group">
+				<div class="col-md-4">
+					<input type="number" pattern="[0-9]*" name="<%= :alley%>" class="form-control" placeholder="弄" autocomplete="off"/>
+				</div>
+				<label class="control-label">弄</label>
+			</div>
+			<div class="form-group">
+				<div class="col-md-4">
+					<input type="number" pattern="[0-9]*" name="<%= :number%>" class="form-control" placeholder="號" autocomplete="off"/>
+				</div>
+				<label class="col-md-2 control-label">號之</label>
+				<div class="col-md-4">
+					<input type="number" pattern="[0-9]*" name="<%= :number1%>" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-4">
+					<input type="number" pattern="[0-9]*" name="<%= :floor%>" class="form-control" placeholder="樓" autocomplete="off"/>
+				</div>
+				<label class="col-md-2 control-label">樓之</label>
+				<div class="col-md-4">
+					<input type="number" pattern="[0-9]*" name="<%= :ext%>" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="hidden" name="<%= :cityCode %>">
+				<input type="hidden" name="<%= :areaCode %>">
+			</div>
+			<div class="form-group">
+				<div class="col-md-3">
+				<button type="reset" class="form-control btn btn-default">清除</button>
+				</div>
+				<div class="col-md-3 col-md-offset-4">
+				<button type="submit" class="form-control btn btn-primary">搜尋</button>
+				</div>
+			</div>
+		<% end %>
+		</div>
+		</div>
+	</div>
+</div>
+
+<% content_for :stylesheets do 
+    stylesheet_link_tag 'welcome'
+end %>
+
+<% content_for :javascripts do 
+    javascript_include_tag 'welcome'
+end %>
