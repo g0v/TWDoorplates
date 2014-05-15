@@ -42,7 +42,7 @@ class DoorplatesController < ApplicationController
   private
   def halfToFull(halfString)
     @fullMap = ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"]
-    unless halfString.nil? || (halfString =~ /^\d*$/) == nil
+    unless halfString.nil? || (halfString =~ /^\d*$/) == nil || halfString.to_i < 1
       halfString.chars.map{|x| @fullMap[x.to_i]}.inject(:+)
     end
   end
