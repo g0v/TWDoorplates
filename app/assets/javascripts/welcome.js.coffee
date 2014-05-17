@@ -34,6 +34,7 @@ $.ajax {
 	success: (data)->
 		$(document).attr("cityAreaCodes", data)
 		buildAreaButtons(data[0].cityCode)
+		$("#city-code-selector button")[0].click()
 	,
 	error: ->
 		alert("Error loading area codes")
