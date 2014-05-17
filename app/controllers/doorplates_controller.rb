@@ -12,7 +12,7 @@ class DoorplatesController < ApplicationController
     @village = params[:village]
     @neighbor = halfToFull params[:neighbor]
     @street = params[:street]
-    @section = halfToFull params[:section]
+    @section = parseSection params[:section].to_i
     @lane = halfToFull params[:lane]
     @alley = halfToFull params[:alley]
     @number = halfToFull params[:number]
@@ -44,6 +44,12 @@ class DoorplatesController < ApplicationController
     @fullMap = ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"]
     unless halfString.nil? || (halfString =~ /^\d*$/) == nil || halfString.to_i < 1
       halfString.chars.map{|x| @fullMap[x.to_i]}.inject(:+)
+    end
+  end
+  
+  def parseSection(section)
+    unless section < 1
+      section.to_cn_words
     end
   end
   
