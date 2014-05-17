@@ -2,7 +2,6 @@
 	<div class="col-md-8 col-md-offset-2">
 		<div class="row column-view">
 			<div class="col-md-3 btn-group-vertical columns" id="city-code-selector">
-				<button type="button" class="btn btn-default" value="">不拘</button>
 				<button type="button" class="btn btn-default" value="63000000">臺北市</button>
 				<button type="button" class="btn btn-default" value="10003000">桃園縣</button>
 				<button type="button" class="btn btn-default" value="10004000">新竹縣</button>
@@ -27,19 +26,6 @@
 				<button type="button" class="btn btn-default" value="09007000">連江縣</button>
 			</div>
 			<div class="col-md-3 btn-group-vertical columns" id="area-code-selector">
-				<button type="button" class="btn btn-default active" value="">不拘</button>
-				<button type="button" class="btn btn-default" value="A010">松山區</button>
-				<button type="button" class="btn btn-default" value="A020">信義區</button>
-				<button type="button" class="btn btn-default" value="A030">大安區</button>
-				<button type="button" class="btn btn-default" value="A040">中山區</button>
-				<button type="button" class="btn btn-default" value="A050">中正區</button>
-				<button type="button" class="btn btn-default" value="A060">大同區</button>
-				<button type="button" class="btn btn-default" value="A070">萬華區</button>
-				<button type="button" class="btn btn-default" value="A080">文山區</button>
-				<button type="button" class="btn btn-default" value="A090">南港區</button>
-				<button type="button" class="btn btn-default" value="A100">內湖區</button>
-				<button type="button" class="btn btn-default" value="A110">士林區</button>
-				<button type="button" class="btn btn-default" value="A120">北投區</button>
 			</div>
 			<div class="col-md-6">
 		<%= form_tag search_doorplates_path, :class => "form-horizontal", :id => "doorplate-search-form", :method => :get, :autocomplete => "off", :remote => true do %>
