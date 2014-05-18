@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<div class="row column-view">
-			<div class="col-md-3 btn-group-vertical columns" id="city-code-selector">
+			<div class="col-md-2 btn-group-vertical columns" id="city-code-selector">
 				<button type="button" class="btn btn-default" value="63000000">臺北市</button>
 				<button type="button" class="btn btn-default" value="10003000">桃園縣</button>
 				<button type="button" class="btn btn-default" value="10004000">新竹縣</button>
@@ -25,66 +25,68 @@
 				<button type="button" class="btn btn-default" value="09020000">金門縣</button>
 				<button type="button" class="btn btn-default" value="09007000">連江縣</button>
 			</div>
-			<div class="col-md-3 btn-group-vertical columns" id="area-code-selector">
+			<div class="col-md-2 btn-group-vertical columns" id="area-code-selector">
 			</div>
-			<div class="col-md-6">
-		<%= form_tag search_doorplates_path, :class => "form-horizontal", :id => "doorplate-search-form", :method => :get, :autocomplete => "off", :remote => true do %>
-			<div class="form-group">
-				<div class="col-md-4">
-					<input type="text" name="<%= :street%>" class="form-control" placeholder="路/街" autocomplete="off"/>
+			<div class="col-md-4">
+				<%= form_tag search_doorplates_path, :class => "form-horizontal", :id => "doorplate-search-form", :method => :get, :autocomplete => "off", :remote => true do %>
+				<div class="form-group">
+					<div class="col-md-8">
+						<input type="text" name="<%= :street%>" class="form-control" placeholder="路/街" autocomplete="off"/>
+					</div>
+					<label class="control-label">街道名</label>
 				</div>
-				<label class="control-label">街道名</label>
+				<div class="form-group">
+					<div class="col-md-6">
+						<input type="number" pattern="[0-9]*" name="<%= :section%>" class="form-control" placeholder="段" autocomplete="off"/>
+					</div>
+					<label class="control-label">段</label>
+				</div>
+				<div class="form-group">
+					<div class="col-md-6">
+						<input type="number" pattern="[0-9]*" name="<%= :lane%>" class="form-control" placeholder="巷" autocomplete="off"/>
+					</div>
+					<label class="control-label">巷</label>
+				</div>
+				<div class="form-group">
+					<div class="col-md-6">
+						<input type="number" pattern="[0-9]*" name="<%= :alley%>" class="form-control" placeholder="弄" autocomplete="off"/>
+					</div>
+					<label class="control-label">弄</label>
+				</div>
+				<div class="form-group">
+					<div class="col-md-6">
+						<input type="number" pattern="[0-9]*" name="<%= :number%>" class="form-control" placeholder="號" autocomplete="off"/>
+					</div>
+					<label class="control-label text-center pull-left">號之</label>
+					<div class="col-md-4">
+						<input type="number" pattern="[0-9]*" name="<%= :number1%>" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-6">
+						<input type="number" pattern="[0-9]*" name="<%= :floor%>" class="form-control" placeholder="樓" autocomplete="off"/>
+					</div>
+					<label class="control-label text-center pull-left">樓之</label>
+					<div class="col-md-4">
+						<input type="number" pattern="[0-9]*" name="<%= :ext%>" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="hidden" name="<%= :cityCode %>">
+					<input type="hidden" name="<%= :areaCode %>">
+				</div>
+				<div class="form-group">
+					<div class="col-md-4">
+						<button type="reset" class="form-control btn btn-default">清除</button>
+					</div>
+					<div class="col-md-4 col-md-offset-4">
+						<button type="submit" class="form-control btn btn-primary">搜尋</button>
+					</div>
+				</div>
+				<% end %>
 			</div>
-			<div class="form-group">
-				<div class="col-md-4">
-					<input type="number" pattern="[0-9]*" name="<%= :section%>" class="form-control" placeholder="段" autocomplete="off"/>
-				</div>
-				<label class="control-label">段</label>
+			<div class="col-md-4" id="doorplate-list">
 			</div>
-			<div class="form-group">
-				<div class="col-md-4">
-					<input type="number" pattern="[0-9]*" name="<%= :lane%>" class="form-control" placeholder="巷" autocomplete="off"/>
-				</div>
-				<label class="control-label">巷</label>
-			</div>
-			<div class="form-group">
-				<div class="col-md-4">
-					<input type="number" pattern="[0-9]*" name="<%= :alley%>" class="form-control" placeholder="弄" autocomplete="off"/>
-				</div>
-				<label class="control-label">弄</label>
-			</div>
-			<div class="form-group">
-				<div class="col-md-4">
-					<input type="number" pattern="[0-9]*" name="<%= :number%>" class="form-control" placeholder="號" autocomplete="off"/>
-				</div>
-				<label class="col-md-2 control-label">號之</label>
-				<div class="col-md-4">
-					<input type="number" pattern="[0-9]*" name="<%= :number1%>" class="form-control">
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-4">
-					<input type="number" pattern="[0-9]*" name="<%= :floor%>" class="form-control" placeholder="樓" autocomplete="off"/>
-				</div>
-				<label class="col-md-2 control-label">樓之</label>
-				<div class="col-md-4">
-					<input type="number" pattern="[0-9]*" name="<%= :ext%>" class="form-control">
-				</div>
-			</div>
-			<div class="form-group">
-				<input type="hidden" name="<%= :cityCode %>">
-				<input type="hidden" name="<%= :areaCode %>">
-			</div>
-			<div class="form-group">
-				<div class="col-md-3">
-				<button type="reset" class="form-control btn btn-default">清除</button>
-				</div>
-				<div class="col-md-3 col-md-offset-4">
-				<button type="submit" class="form-control btn btn-primary">搜尋</button>
-				</div>
-			</div>
-		<% end %>
-		</div>
 		</div>
 	</div>
 </div>
