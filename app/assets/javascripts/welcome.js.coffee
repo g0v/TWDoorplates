@@ -27,6 +27,14 @@ buildAreaButtons = (cityCode) ->
 		node.text($(this)[0].areaName)
 		$("#area-code-selector").append(node)
 
+buildDoorplates = (doorplates)->
+	$("#doorplate-list").empty()
+	$("#doorplate-list").append($("<table class='table table-striped'><tbody></tbody></table>"))
+	$(doorplates).each ->
+		node = $("<tr><td>" + $(this)[0].address + "</td></tr>")
+		$("#doorplate-list tbody").append(node)
+	
+
 $.ajax {
 	url: "/assets/cityAreaCodes.json",
 	type: "GET",
@@ -39,3 +47,9 @@ $.ajax {
 	error: ->
 		alert("Error loading area codes")
 }
+
+$(document).ready ->
+	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
+		buildDoorplates xhr.responseJSON.rows
+	).on "ajax:error", (e, xhr, status, error) ->
+		$("#doorplate-list").append "<p>ERROR</p>"
