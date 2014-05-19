@@ -31,9 +31,20 @@ buildDoorplates = (doorplates)->
 	$("#doorplate-list").empty()
 	$("#doorplate-list").append($("<table class='table table-striped'><tbody></tbody></table>"))
 	$(doorplates).each ->
-		node = $("<tr><td>" + $(this)[0].address + "</td></tr>")
+		content = $(this)[0].address
+		content = emphasizeVillage(content)
+		content = emphasizeNeighbor(content)
+		node = $("<tr><td>#{content}</td></tr>")
 		$("#doorplate-list tbody").append(node)
-	
+
+emphasizeVillage = (str)->
+	emphasize(str, "strong alley", str.substr(str.match(/[區鄉鎮市][^區鄉鎮市]{1,3}里/).index+1).match(/\D{1,3}里/)[0])
+
+emphasizeNeighbor = (str)->
+	emphasize(str, "strong neighbor", /\d{3}鄰/)
+
+emphasize = (str, classes, regexp)->
+	str.replace(regexp, "<span class='#{classes}'>"+str.match(regexp)[0]+"</span>")
 
 $.ajax {
 	url: "/assets/cityAreaCodes.json",
