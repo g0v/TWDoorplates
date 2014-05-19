@@ -29,13 +29,16 @@ buildAreaButtons = (cityCode) ->
 
 buildDoorplates = (doorplates)->
 	$("#doorplate-list").empty()
-	$("#doorplate-list").append($("<table class='table table-striped'><tbody></tbody></table>"))
-	$(doorplates).each ->
-		content = $(this)[0].address
-		content = emphasizeVillage(content)
-		content = emphasizeNeighbor(content)
-		node = $("<tr><td>#{content}</td></tr>")
-		$("#doorplate-list tbody").append(node)
+	if $(doorplates).length > 0
+		$("#doorplate-list").append($("<table class='table table-striped'><tbody></tbody></table>"))
+		$(doorplates).each ->
+			content = $(this)[0].address
+			content = emphasizeVillage(content)
+			content = emphasizeNeighbor(content)
+			node = $("<tr><td>#{content}</td></tr>")
+			$("#doorplate-list tbody").append(node)
+	else
+		$("#doorplate-list").append $("<div class='jumbotron'><h3>沒有資料</h3></div>")
 
 emphasizeVillage = (str)->
 	emphasize(str, "strong alley", str.substr(str.match(/[區鄉鎮市][^區鄉鎮市]{1,3}里/).index+1).match(/\D{1,3}里/)[0])
@@ -63,4 +66,4 @@ $(document).ready ->
 	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
 		buildDoorplates xhr.responseJSON.rows
 	).on "ajax:error", (e, xhr, status, error) ->
-		$("#doorplate-list").append "<p>ERROR</p>"
+		$("#doorplate-list").append $("<div class='jumbotron'><h3>查詢失敗</h3></div>")
