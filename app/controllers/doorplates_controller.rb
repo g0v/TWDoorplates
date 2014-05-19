@@ -21,6 +21,8 @@ class DoorplatesController < ApplicationController
     @ext = halfToFull params[:ext]
     @tk = (Time.now.to_f*1000).to_i
     @tks = 0
+    @rows = params[:rows] || 20
+    @page = params[:page] || 1
     unless @cityCode.nil? && @areaCode.nil?
       @adminCode = @cityCode[0, 5] + @areaCode[1, 3]
     end
@@ -28,7 +30,7 @@ class DoorplatesController < ApplicationController
     https = Net::HTTP.new(uri.host, uri.port)
     https.use_ssl = false
 
-    body = URI.encode_www_form({:getDoorplateByDoorplate => nil, :adminCode => @adminCode, :cityCode => @cityCode, :areaCode => @areaCode, :village => @village, :neighbor => @neighbor, :street => @street, :section => @section, :lane => @lane, :alley => @alley, :number => @number, :number1 => @number1, :floor => @floor, :ext => @ext, :tk => @tk, :tks => @tks})
+    body = URI.encode_www_form({:getDoorplateByDoorplate => nil, :adminCode => @adminCode, :cityCode => @cityCode, :areaCode => @areaCode, :village => @village, :neighbor => @neighbor, :street => @street, :section => @section, :lane => @lane, :alley => @alley, :number => @number, :number1 => @number1, :floor => @floor, :ext => @ext, :tk => @tk, :tks => @tks, :rows => @rows, :page => @page})
 
     response = https.post(uri.path, body)
     @result = JSON.parse(response.body)
