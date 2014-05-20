@@ -27,7 +27,7 @@
 			</div>
 			<div class="col-md-2 btn-group-vertical columns" id="area-code-selector">
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 columns">
 				<%= form_tag search_doorplates_path, :class => "form-horizontal", :id => "doorplate-search-form", :method => :get, :autocomplete => "off", :remote => true do %>
 				<div class="form-group">
 					<div class="col-md-8">
@@ -75,7 +75,7 @@
 					<input type="hidden" name="<%= :cityCode %>">
 					<input type="hidden" name="<%= :areaCode %>">
 				</div>
-				<div class="form-group">
+				<div class="form-group button-group">
 					<div class="col-md-4">
 						<button type="reset" class="form-control btn btn-default">清除</button>
 					</div>

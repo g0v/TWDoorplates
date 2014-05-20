@@ -2,10 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$min-column-view-height : 388px;
+
+html, body {
+    height: 100%;
+}
+
+.container, .content, .content .row, .content .row div, .columns form
+{
+	height: 100%;
+}
+
 .column-view
 {
-	height: 400px;
+	height: auto;
 	padding-bottom: 60px;
+	min-height: $min-column-view-height;
+}
+
+.column-view .button-group
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: auto;
+	margin-bottom: 0px;
 }
 
 .columns
@@ -13,6 +35,26 @@
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
+}
+
+.columns#doorplate-list
+{
+	font-size: 150%;
+}
+
+.columns#doorplate-list .jumbotron
+{
+	margin-bottom: 0px;
+}
+
+.content .row form
+{
+	position: relative;
+}
+
+.content .row form div
+{
+	height: auto;
 }
 
 .strong
