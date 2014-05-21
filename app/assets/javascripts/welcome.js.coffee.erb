@@ -50,7 +50,7 @@ emphasize = (str, classes, regexp)->
 	str.replace(regexp, "<span class='#{classes}'>"+str.match(regexp)[0]+"</span>")
 
 $.ajax {
-	url: "/assets/cityAreaCodes.json",
+	url: '<%= asset_path "cityAreaCodes.json" %>',
 	type: "GET",
 	dataType: "json"
 	success: (data)->
