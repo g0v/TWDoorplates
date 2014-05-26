@@ -41,7 +41,7 @@ buildDoorplates = (doorplates)->
 		$("#doorplate-list").append $("<div class='jumbotron'><h3>沒有資料</h3></div>")
 
 emphasizeVillage = (str)->
-	emphasize(str, "strong alley", str.substr(str.match(/[區鄉鎮市][^區鄉鎮市]{1,3}里/).index+1).match(/\D{1,3}里/)[0])
+	emphasize(str, "strong alley", str.substr(str.match(/[區鄉鎮市][^區鄉鎮市]{1,3}[里村]/).index+1).match(/\D{1,3}[里村]/)[0])
 
 emphasizeNeighbor = (str)->
 	emphasize(str, "strong neighbor", /\d{3}鄰/)
