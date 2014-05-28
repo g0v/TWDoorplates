@@ -42,6 +42,15 @@ class DoorplatesController < ApplicationController
   end
   
   private
+  
+  def mergeResults(results)
+    result = {}
+    result["rows"] = []
+    results.each{|x| result["rows"].concat x["rows"]}
+    
+    result
+  end
+  
   def halfToFull(halfString)
     @fullMap = ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"]
     unless halfString.nil? || (halfString =~ /^\d*$/) == nil || halfString.to_i < 1
