@@ -17,14 +17,14 @@ $("#area-code-selector").on "click", "button", ->
 
 buildAreaButtons = (cityCode) ->
 	$("#area-code-selector").empty()
-	$("#area-code-selector").append("<button type=\"button\" class=\"btn btn-default active\" value=\"\">不拘</button>")
+	#$("#area-code-selector").append("<label class=\"btn btn-default\"><input type=\"checkbox\" value=\"\">不拘</label>")
 	areaCode = $.map($(document).attr("cityAreaCodes"), (val) ->
 	    val.areas if val.cityCode == cityCode
 	)
 	$(areaCode).each ->
-		node = $("<button type=\"button\" class=\"btn btn-default\"></button>")
-		node.val($(this)[0].areaCode)
-		node.text($(this)[0].areaName)
+		node = $("<label class=\"btn btn-default\"><input type=\"checkbox\"></label>")
+		$("input", node).val($(this)[0].areaCode)
+		node.append($(this)[0].areaName)
 		$("#area-code-selector").append(node)
 
 buildDoorplates = (doorplates)->
