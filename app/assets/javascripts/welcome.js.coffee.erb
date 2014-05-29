@@ -17,14 +17,14 @@ $("#area-code-selector").on "click", "button", ->
 
 buildAreaButtons = (cityCode) ->
 	$("#area-code-selector").empty()
-	$("#area-code-selector").append("<button type=\"button\" class=\"btn btn-default active\" value=\"\">不拘</button>")
+	#$("#area-code-selector").append("<label class=\"btn btn-default\"><input type=\"checkbox\" value=\"\">不拘</label>")
 	areaCode = $.map($(document).attr("cityAreaCodes"), (val) ->
 	    val.areas if val.cityCode == cityCode
 	)
 	$(areaCode).each ->
-		node = $("<button type=\"button\" class=\"btn btn-default\"></button>")
-		node.val($(this)[0].areaCode)
-		node.text($(this)[0].areaName)
+		node = $("<label class=\"btn btn-default\"><input type=\"checkbox\"></label>")
+		$("input", node).val($(this)[0].areaCode)
+		node.append($(this)[0].areaName)
 		$("#area-code-selector").append(node)
 
 buildDoorplates = (doorplates)->
@@ -65,5 +65,11 @@ $.ajax {
 $(document).ready ->
 	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
 		buildDoorplates xhr.responseJSON.rows
-	).on "ajax:error", (e, xhr, status, error) ->
+	).on("ajax:error", (e, xhr, status, error) ->
 		$("#doorplate-list").append $("<div class='jumbotron'><h3>查詢失敗</h3></div>")
+  ).on("ajax:before", ->
+    areas = $("#area-code-selector label.active input").map(->
+      $(this).val()
+    ).toArray().join(",")
+    $("input[name='areaCode']").val(areas)
+  )
