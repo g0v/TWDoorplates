@@ -5,10 +5,8 @@ require 'number_to_cn'
 
 class DoorplatesController < ApplicationController
   def search
-    uri = URI("http://www.ris.gov.tw/swpro/doorplate.do?getDoorplateByDoorplate")
-    
     @cityCode = params[:cityCode]
-    @areaCode = params[:areaCode]
+    @areaCodes = params[:areaCode]
     @village = params[:village]
     @neighbor = halfToFull params[:neighbor]
     @street = params[:street]
@@ -19,29 +17,45 @@ class DoorplatesController < ApplicationController
     @number1 = halfToFull params[:number1]
     @floor = parseFloor params[:floor].to_i
     @ext = halfToFull params[:ext]
-    @tk = (Time.now.to_f*1000).to_i
-    @tks = 0
     @rows = params[:rows] || 20
     @page = params[:page] || 1
-    unless @cityCode.nil? && @areaCode.nil?
-      @adminCode = @cityCode[0, 5] + @areaCode[1, 3]
-    end
+    @results = []
     
-    https = Net::HTTP.new(uri.host, uri.port)
-    https.use_ssl = false
-
-    body = URI.encode_www_form({:getDoorplateByDoorplate => nil, :adminCode => @adminCode, :cityCode => @cityCode, :areaCode => @areaCode, :village => @village, :neighbor => @neighbor, :street => @street, :section => @section, :lane => @lane, :alley => @alley, :number => @number, :number1 => @number1, :floor => @floor, :ext => @ext, :tk => @tk, :tks => @tks, :rows => @rows, :page => @page})
-
-    response = https.post(uri.path, body)
-    @result = JSON.parse(response.body)
+    @areaCodes.split(",").each{|areaCode| @results << query({:cityCode => @cityCode, :areaCode => areaCode, :village => @village, :neighbor => @neighbor, :street => @street, :section => @section, :lane => @lane, :alley => @alley, :number => @number, :number1 => @number1, :floor => @floor, :ext => @ext, :rows => @rows, :page => @page})}
     
     respond_to do |format|
       #format.html # search.html.erb
-      format.json { render json: @result }
+      format.json { render json: mergeResults(@results) }
     end
   end
   
   private
+  
+  def query(queryParams)
+    uri = URI("http://www.ris.gov.tw/swpro/doorplate.do?getDoorplateByDoorplate")
+    https = Net::HTTP.new(uri.host, uri.port)
+    https.use_ssl = false
+    
+    @cityCode = queryParams[:cityCode]
+    @areaCode = queryParams[:areaCode]
+    @adminCode = @cityCode[0, 5] + @areaCode[1, 3] unless @cityCode.nil? || @cityCode.empty? || @areaCode.nil? || @areaCode.empty?
+    
+    defaultParams = {:getDoorplateByDoorplate => nil, :adminCode => @adminCode, :tk => (Time.now.to_f*1000).to_i, :tks => 0}
+
+    body = URI.encode_www_form(defaultParams.merge(queryParams))
+
+    response = https.post(uri.path, body)
+    @result = JSON.parse(response.body)
+  end
+  
+  def mergeResults(results)
+    result = {}
+    result["rows"] = []
+    results.each{|x| result["rows"].concat x["rows"]}
+    
+    result
+  end
+  
   def halfToFull(halfString)
     @fullMap = ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"]
     unless halfString.nil? || (halfString =~ /^\d*$/) == nil || halfString.to_i < 1

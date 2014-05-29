@@ -25,7 +25,7 @@
 				<button type="button" class="btn btn-default" value="09020000">金門縣</button>
 				<button type="button" class="btn btn-default" value="09007000">連江縣</button>
 			</div>
-			<div class="col-md-2 btn-group-vertical columns" id="area-code-selector">
+			<div class="col-md-2 btn-group-vertical columns" id="area-code-selector" data-toggle="buttons">
 			</div>
 			<div class="col-md-4 columns">
 				<%= form_tag search_doorplates_path, :class => "form-horizontal", :id => "doorplate-search-form", :method => :get, :autocomplete => "off", :remote => true do %>
@@ -96,5 +96,5 @@
 end %>
 
 <% content_for :javascripts do 
-    javascript_include_tag 'welcome'
+	javascript_include_tag 'welcome', 'twitter/bootstrap/button'
 end %>
