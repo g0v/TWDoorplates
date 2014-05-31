@@ -65,6 +65,25 @@ buildAddressData = ->
   )
   $.twAddrData.sortedAddress = sortedAddress
 
+streetMatcher = (streets)->
+  (q, cb) ->
+    # an array that will be populated with substring matches
+    matches = []
+    city = $("#city-code-selector button.active").text()
+
+    # regex used to determine if a string contains the substring `q`
+    substrRegex = new RegExp(q, 'i')
+
+    # iterate through the pool of strings and for any string that
+    # contains the substring `q`, add it to the `matches` array
+    $.each($.twAddrData.sortedAddress[city], (i, str) ->
+      if (substrRegex.test(str)) 
+        # the typeahead jQuery plugin expects suggestions to a
+        # JavaScript object, refer to typeahead docs for more info
+        matches.push({ value: str })
+    )
+    cb(matches)
+
 $.ajax {
 	url: '<%= asset_path "cityAreaCodes.json" %>',
 	type: "GET",
@@ -100,3 +119,13 @@ $(document).ready ->
     ).toArray().join(",")
     $("input[name='areaCode']").val(areas)
   )
+ $("#doorplate-search-form input.typeahead").typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'street',
+    displayKey: 'value',
+    source: streetMatcher()
+  })
