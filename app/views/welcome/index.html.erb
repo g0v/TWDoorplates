@@ -31,7 +31,7 @@
 				<%= form_tag search_doorplates_path, :class => "form-horizontal", :id => "doorplate-search-form", :method => :get, :autocomplete => "off", :remote => true do %>
 				<div class="form-group">
 					<div class="col-md-8">
-						<input type="text" name="<%= :street%>" class="form-control" placeholder="路/街" autocomplete="off"/>
+						<input type="text" name="<%= :street%>" class="form-control typeahead scrollable-dropdown-menu" placeholder="路/街" autocomplete="off"/>
 					</div>
 					<label class="control-label">街道名</label>
 				</div>
@@ -92,9 +92,9 @@
 </div>
 
 <% content_for :stylesheets do 
-    stylesheet_link_tag 'welcome'
+    stylesheet_link_tag 'welcome', 'typeaheadjs'
 end %>
 
 <% content_for :javascripts do 
-	javascript_include_tag 'welcome', 'twitter/bootstrap/button'
+	javascript_include_tag 'welcome', 'twitter/bootstrap/button', 'typeahead.bundle.min'
 end %>
