@@ -49,6 +49,22 @@ emphasizeNeighbor = (str)->
 emphasize = (str, classes, regexp)->
 	str.replace(regexp, "<span class='#{classes}'>"+str.match(regexp)[0]+"</span>")
 
+buildAddressData = ->
+  sortedAddress = []
+  $.twAddrData = JSON.parse localStorage.twAddrData
+  
+  $.map($.twAddrData.Data, (elm, zip) ->
+    $.map(elm, (elm2, city) ->
+      sortedAddress[city] = [] unless sortedAddress[city]?
+      $.map(elm2, (elm3, area) ->
+        $.map(elm3, (street, index) ->
+          sortedAddress[city].push(area+street)
+        )
+      )
+    )
+  )
+  $.twAddrData.sortedAddress = sortedAddress
+
 $.ajax {
 	url: '<%= asset_path "cityAreaCodes.json" %>',
 	type: "GET",
@@ -60,6 +76,17 @@ $.ajax {
 	,
 	error: ->
 		alert("Error loading area codes")
+}
+
+$.ajax {
+  url: '<%= asset_path "zip3.json" %>',
+  type: "GET",
+  dataType: "json"
+  success: (data) ->
+    localStorage.twAddrData = JSON.stringify(data)
+    buildAddressData()
+  error: ->
+    alert("Error loading typeahead data for street")
 }
 
 $(document).ready ->
