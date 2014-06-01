@@ -55,10 +55,9 @@ buildAddressData = ->
   
   $.map($.twAddrData.Data, (elm, zip) ->
     $.map(elm, (elm2, city) ->
-      sortedAddress[city] = [] unless sortedAddress[city]?
       $.map(elm2, (elm3, area) ->
         $.map(elm3, (street, index) ->
-          sortedAddress[city].push(area+street)
+          sortedAddress.push({city: city, area: area, street: street})
         )
       )
     )
@@ -73,14 +72,17 @@ streetMatcher = (streets)->
 
     # regex used to determine if a string contains the substring `q`
     substrRegex = new RegExp(q, 'i')
+    candidates = $.grep($.twAddrData.sortedAddress, (obj) ->
+      obj if obj.city == city
+    )
 
     # iterate through the pool of strings and for any string that
     # contains the substring `q`, add it to the `matches` array
-    $.each($.twAddrData.sortedAddress[city], (i, str) ->
-      if (substrRegex.test(str)) 
+    $.each(candidates, (i, candidate) ->
+      if (substrRegex.test(candidate.street)) 
         # the typeahead jQuery plugin expects suggestions to a
         # JavaScript object, refer to typeahead docs for more info
-        matches.push({ value: str })
+        matches.push(candidate)
     )
     cb(matches)
 
@@ -126,6 +128,11 @@ $(document).ready ->
   },
   {
     name: 'street',
-    displayKey: 'value',
-    source: streetMatcher()
+    displayKey: (obj) ->
+      obj.street
+    ,
+    source: streetMatcher(),
+    templates: {
+      suggestion: Handlebars.compile('<p>{{area}}<strong>{{street}}</strong></p>')
+    }
   })
