@@ -25,6 +25,7 @@ buildAreaButtons = (cityCode) ->
 		node = $("<label class=\"btn btn-default\"><input type=\"checkbox\"></label>")
 		$("input", node).val($(this)[0].areaCode)
 		node.append($(this)[0].areaName)
+		node.attr("name", $(this)[0].areaName)
 		$("#area-code-selector").append(node)
 
 buildDoorplates = (doorplates)->
@@ -49,6 +50,68 @@ emphasizeNeighbor = (str)->
 emphasize = (str, classes, regexp)->
 	str.replace(regexp, "<span class='#{classes}'>"+str.match(regexp)[0]+"</span>")
 
+buildAddressData = ->
+  sortedAddress = []
+  $.twAddrData = JSON.parse localStorage.twAddrData
+  
+  $.map($.twAddrData.Data, (elm, zip) ->
+    $.map(elm, (elm2, city) ->
+      $.map(elm2, (elm3, area) ->
+        $.map(elm3, (street, index) ->
+          sortedAddress.push({city: city, area: area, street: street})
+        )
+      )
+    )
+  )
+  $.twAddrData.sortedAddress = sortedAddress
+
+streetMatcher = (streets)->
+  (q, cb) ->
+    # an array that will be populated with substring matches
+    matches = []
+    city = $("#city-code-selector button.active").text()
+
+    # regex used to determine if a string contains the substring `q`
+    substrRegex = new RegExp(q, 'i')
+    candidates = $.grep($.twAddrData.sortedAddress, (obj) ->
+      obj if obj.city == city
+    )
+
+    # iterate through the pool of strings and for any string that
+    # contains the substring `q`, add it to the `matches` array
+    $.each(candidates, (i, candidate) ->
+      if (substrRegex.test(candidate.street)) 
+        # the typeahead jQuery plugin expects suggestions to a
+        # JavaScript object, refer to typeahead docs for more info
+        matches.push(candidate)
+    )
+    cb(matches)
+
+numberParser = (str) ->
+  if str.length != 1
+    return null
+  
+  resetta = [
+    {num: 0, fullChar: "０", zh_TW: "零"},
+    {num: 1, fullChar: "１", zh_TW: "一"},
+    {num: 2, fullChar: "２", zh_TW: "二"},
+    {num: 3, fullChar: "３", zh_TW: "三"},
+    {num: 4, fullChar: "４", zh_TW: "四"},
+    {num: 5, fullChar: "５", zh_TW: "五"},
+    {num: 6, fullChar: "６", zh_TW: "六"},
+    {num: 7, fullChar: "７", zh_TW: "七"},
+    {num: 8, fullChar: "８", zh_TW: "八"},
+    {num: 9, fullChar: "９", zh_TW: "九"}
+  ]
+  unit = "num"
+  if str.match(/[零一二三四五六七八九]/)
+    unit = "zh_TW"
+  if str.match(/[０１２３４５６７８９]/)
+    unit = "fullChar"
+  resetta.filter((obj) ->
+    obj.num if obj[unit] == str
+  )[0].num
+
 $.ajax {
 	url: '<%= asset_path "cityAreaCodes.json" %>',
 	type: "GET",
@@ -62,6 +125,17 @@ $.ajax {
 		alert("Error loading area codes")
 }
 
+$.ajax {
+  url: '<%= asset_path "zip3.json" %>',
+  type: "GET",
+  dataType: "json"
+  success: (data) ->
+    localStorage.twAddrData = JSON.stringify(data)
+    buildAddressData()
+  error: ->
+    alert("Error loading typeahead data for street")
+}
+
 $(document).ready ->
 	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
 		buildDoorplates xhr.responseJSON.rows
@@ -72,4 +146,30 @@ $(document).ready ->
       $(this).val()
     ).toArray().join(",")
     $("input[name='areaCode']").val(areas)
+  )
+ $("#doorplate-search-form input.typeahead").typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'street',
+    displayKey: (obj) ->
+      obj.street
+    ,
+    source: streetMatcher(),
+    templates: {
+      suggestion: Handlebars.compile('<p>{{area}}<strong>{{street}}</strong></p>')
+    }
+  }).on("typeahead:cursorchanged", (e, suggestion, dataset) ->
+    $("#area-code-selector .active").removeClass "active"
+    $("#area-code-selector label[name="+suggestion.area+"]").addClass("active")
+  ).on("typeahead:selected", (e, suggestion, dataset) ->
+    $("#area-code-selector .active").removeClass "active"
+    $("#area-code-selector label[name="+suggestion.area+"]").addClass("active")
+    section = suggestion.street.match(/.段$/)
+    if section
+      section = numberParser(section[0][0])
+      $("#doorplate-search-form input[name='section']").val(section)
+      $("#doorplate-search-form input.typeahead").typeahead('val', (suggestion.street.substr(0, suggestion.street.length-2)))
   )
