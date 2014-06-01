@@ -25,6 +25,7 @@ buildAreaButtons = (cityCode) ->
 		node = $("<label class=\"btn btn-default\"><input type=\"checkbox\"></label>")
 		$("input", node).val($(this)[0].areaCode)
 		node.append($(this)[0].areaName)
+		node.attr("name", $(this)[0].areaName)
 		$("#area-code-selector").append(node)
 
 buildDoorplates = (doorplates)->
@@ -135,4 +136,10 @@ $(document).ready ->
     templates: {
       suggestion: Handlebars.compile('<p>{{area}}<strong>{{street}}</strong></p>')
     }
-  })
+  }).on("typeahead:cursorchanged", (e, suggestion, dataset) ->
+    $("#area-code-selector .active").removeClass "active"
+    $("#area-code-selector label[name="+suggestion.area+"]").addClass("active")
+  ).on("typeahead:selected", (e, suggestion, dataset) ->
+    $("#area-code-selector .active").removeClass "active"
+    $("#area-code-selector label[name="+suggestion.area+"]").addClass("active")
+  )
