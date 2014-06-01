@@ -167,4 +167,9 @@ $(document).ready ->
   ).on("typeahead:selected", (e, suggestion, dataset) ->
     $("#area-code-selector .active").removeClass "active"
     $("#area-code-selector label[name="+suggestion.area+"]").addClass("active")
+    section = suggestion.street.match(/.段$/)
+    if section
+      section = numberParser(section[0][0])
+      $("#doorplate-search-form input[name='section']").val(section)
+      $("#doorplate-search-form input.typeahead").typeahead('val', (suggestion.street.substr(0, suggestion.street.length-2)))
   )
