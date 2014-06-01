@@ -87,6 +87,31 @@ streetMatcher = (streets)->
     )
     cb(matches)
 
+numberParser = (str) ->
+  if str.length != 1
+    return null
+  
+  resetta = [
+    {num: 0, fullChar: "０", zh_TW: "零"},
+    {num: 1, fullChar: "１", zh_TW: "一"},
+    {num: 2, fullChar: "２", zh_TW: "二"},
+    {num: 3, fullChar: "３", zh_TW: "三"},
+    {num: 4, fullChar: "４", zh_TW: "四"},
+    {num: 5, fullChar: "５", zh_TW: "五"},
+    {num: 6, fullChar: "６", zh_TW: "六"},
+    {num: 7, fullChar: "７", zh_TW: "七"},
+    {num: 8, fullChar: "８", zh_TW: "八"},
+    {num: 9, fullChar: "９", zh_TW: "九"}
+  ]
+  unit = "num"
+  if str.match(/[零一二三四五六七八九]/)
+    unit = "zh_TW"
+  if str.match(/[０１２３４５６７８９]/)
+    unit = "fullChar"
+  resetta.filter((obj) ->
+    obj.num if obj[unit] == str
+  )[0].num
+
 $.ajax {
 	url: '<%= asset_path "cityAreaCodes.json" %>',
 	type: "GET",
