@@ -141,6 +141,19 @@ bindStreetTypeahead = ->
   )
   #console.log "Typeahead binded"
 
+loadStreetData = ->
+  $.ajax {
+    url: '<%= asset_path "zip3.json" %>',
+    type: "GET",
+    dataType: "json",
+    success: (data) ->
+      localStorage.twAddrData = JSON.stringify(data)
+      buildAddressData()
+      bindStreetTypeahead()
+    error: ->
+      alert("Error loading typeahead data for street")
+  }
+
 $.ajax {
 	url: '<%= asset_path "cityAreaCodes.json" %>',
 	type: "GET",
@@ -154,17 +167,6 @@ $.ajax {
 		alert("Error loading area codes")
 }
 
-$.ajax {
-  url: '<%= asset_path "zip3.json" %>',
-  type: "GET",
-  dataType: "json"
-  success: (data) ->
-    localStorage.twAddrData = JSON.stringify(data)
-    buildAddressData()
-  error: ->
-    alert("Error loading typeahead data for street")
-}
-
 $(document).ready ->
 	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
 		buildDoorplates xhr.responseJSON.rows
@@ -176,4 +178,4 @@ $(document).ready ->
     ).toArray().join(",")
     $("input[name='areaCode']").val(areas)
   )
- bindStreetTypeahead()
+ loadStreetData()
