@@ -112,42 +112,8 @@ numberParser = (str) ->
     obj.num if obj[unit] == str
   )[0].num
 
-$.ajax {
-	url: '<%= asset_path "cityAreaCodes.json" %>',
-	type: "GET",
-	dataType: "json"
-	success: (data)->
-		$(document).attr("cityAreaCodes", data)
-		buildAreaButtons(data[0].cityCode)
-		$("#city-code-selector button")[0].click()
-	,
-	error: ->
-		alert("Error loading area codes")
-}
-
-$.ajax {
-  url: '<%= asset_path "zip3.json" %>',
-  type: "GET",
-  dataType: "json"
-  success: (data) ->
-    localStorage.twAddrData = JSON.stringify(data)
-    buildAddressData()
-  error: ->
-    alert("Error loading typeahead data for street")
-}
-
-$(document).ready ->
-	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
-		buildDoorplates xhr.responseJSON.rows
-	).on("ajax:error", (e, xhr, status, error) ->
-		$("#doorplate-list").append $("<div class='jumbotron'><h3>查詢失敗</h3></div>")
-  ).on("ajax:before", ->
-    areas = $("#area-code-selector label.active input").map(->
-      $(this).val()
-    ).toArray().join(",")
-    $("input[name='areaCode']").val(areas)
-  )
- $("#doorplate-search-form input.typeahead").typeahead({
+bindStreetTypeahead = ->
+  $("#doorplate-search-form input.typeahead").typeahead({
     hint: true,
     highlight: true,
     minLength: 1
@@ -173,3 +139,53 @@ $(document).ready ->
       $("#doorplate-search-form input[name='section']").val(section)
       $("#doorplate-search-form input.typeahead").typeahead('val', (suggestion.street.substr(0, suggestion.street.length-2)))
   )
+  #console.log "Typeahead binded"
+
+loadStreetData = ->
+  $.ajax {
+    url: '<%= asset_path "zip3.json" %>',
+    type: "GET",
+    dataType: "json",
+    success: (data) ->
+      localStorage.twAddrData = JSON.stringify(data)
+      buildAddressData()
+      bindStreetTypeahead()
+    error: ->
+      alert("Error loading typeahead data for street")
+  }
+
+$.ajax {
+	url: '<%= asset_path "cityAreaCodes.json" %>',
+	type: "GET",
+	dataType: "json"
+	success: (data)->
+		$(document).attr("cityAreaCodes", data)
+		buildAreaButtons(data[0].cityCode)
+		$("#city-code-selector button")[0].click()
+	,
+	error: ->
+		alert("Error loading area codes")
+}
+
+$(document).ready ->
+	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
+		buildDoorplates xhr.responseJSON.rows
+	).on("ajax:error", (e, xhr, status, error) ->
+		$("#doorplate-list").append $("<div class='jumbotron'><h3>查詢失敗</h3></div>")
+  ).on("ajax:before", ->
+    areas = $("#area-code-selector label.active input").map(->
+      $(this).val()
+    ).toArray().join(",")
+    $("input[name='areaCode']").val(areas)
+  )
+  
+  if localStorage != null && localStorage.twAddrData != undefined
+    #console.log "locaStorage found"
+    buildAddressData()
+  
+  if $.twAddrData == undefined || $.twAddrData.Version != "20130406"
+    #console.log "Data not loaded or Version not match, load from server"
+    loadStreetData()
+  else
+    #console.log "Version checked, bind typeahead"
+    bindStreetTypeahead()
