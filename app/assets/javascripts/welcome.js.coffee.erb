@@ -178,4 +178,14 @@ $(document).ready ->
     ).toArray().join(",")
     $("input[name='areaCode']").val(areas)
   )
- loadStreetData()
+  
+  if localStorage != null && localStorage.twAddrData != undefined
+    #console.log "locaStorage found"
+    buildAddressData()
+  
+  if $.twAddrData == undefined || $.twAddrData.Version != "20130406"
+    #console.log "Data not loaded or Version not match, load from server"
+    loadStreetData()
+  else
+    #console.log "Version checked, bind typeahead"
+    bindStreetTypeahead()
