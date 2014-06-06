@@ -18,7 +18,7 @@ $("#area-code-selector").on "click", "button", ->
 buildAreaButtons = (cityCode) ->
 	$("#area-code-selector").empty()
 	#$("#area-code-selector").append("<label class=\"btn btn-default\"><input type=\"checkbox\" value=\"\">不拘</label>")
-	areaCode = $.map($(document).attr("cityAreaCodes"), (val) ->
+	areaCode = $.map($.cityAreaCodes.Data, (val) ->
 	    val.areas if val.cityCode == cityCode
 	)
 	$(areaCode).each ->
@@ -154,14 +154,18 @@ loadStreetData = ->
       alert("Error loading typeahead data for street")
   }
 
+buildCityAreaCodesData = ->
+  $.cityAreaCodes = JSON.parse localStorage.cityAreaCodes
+
 loadCityAreaCodesData = ->
   $.ajax {
     url: '<%= asset_path "cityAreaCodes.json" %>',
     type: "GET",
     dataType: "json",
     success: (data) ->
-      $(document).attr("cityAreaCodes", data.Data)
-      buildAreaButtons(data.Data[0].cityCode)
+      localStorage.cityAreaCodes = JSON.stringify(data)
+      buildCityAreaCodesData()
+      buildAreaButtons($.cityAreaCodes.Data[0].cityCode)
       $("#city-code-selector button")[0].click()
     ,
     error: ->
