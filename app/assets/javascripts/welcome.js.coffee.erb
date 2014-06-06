@@ -154,18 +154,19 @@ loadStreetData = ->
       alert("Error loading typeahead data for street")
   }
 
-$.ajax {
-	url: '<%= asset_path "cityAreaCodes.json" %>',
-	type: "GET",
-	dataType: "json"
-	success: (data)->
-		$(document).attr("cityAreaCodes", data)
-		buildAreaButtons(data[0].cityCode)
-		$("#city-code-selector button")[0].click()
-	,
-	error: ->
-		alert("Error loading area codes")
-}
+loadCityAreaCodesData = ->
+  $.ajax {
+    url: '<%= asset_path "cityAreaCodes.json" %>',
+    type: "GET",
+    dataType: "json",
+    success: (data) ->
+      $(document).attr("cityAreaCodes", data)
+      buildAreaButtons(data[0].cityCode)
+      $("#city-code-selector button")[0].click()
+    ,
+    error: ->
+      alert("Error loading area codes")
+  }
 
 $(document).ready ->
   $("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
@@ -178,6 +179,8 @@ $(document).ready ->
     ).toArray().join(",")
     $("input[name='areaCode']").val(areas)
   )
+  
+  loadCityAreaCodesData()
   
   if localStorage != null && localStorage.twAddrData != undefined
     #console.log "locaStorage found"
