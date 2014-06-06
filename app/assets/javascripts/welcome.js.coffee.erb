@@ -157,6 +157,10 @@ loadStreetData = ->
 buildCityAreaCodesData = ->
   $.cityAreaCodes = JSON.parse localStorage.cityAreaCodes
 
+initAreaButtons = ->
+  buildAreaButtons($.cityAreaCodes.Data[0].cityCode)
+  $("#city-code-selector button")[0].click()
+
 loadCityAreaCodesData = ->
   $.ajax {
     url: '<%= asset_path "cityAreaCodes.json" %>',
@@ -165,8 +169,7 @@ loadCityAreaCodesData = ->
     success: (data) ->
       localStorage.cityAreaCodes = JSON.stringify(data)
       buildCityAreaCodesData()
-      buildAreaButtons($.cityAreaCodes.Data[0].cityCode)
-      $("#city-code-selector button")[0].click()
+      initAreaButtons()
     ,
     error: ->
       alert("Error loading area codes")
