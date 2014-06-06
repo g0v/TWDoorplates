@@ -160,8 +160,8 @@ loadCityAreaCodesData = ->
     type: "GET",
     dataType: "json",
     success: (data) ->
-      $(document).attr("cityAreaCodes", data)
-      buildAreaButtons(data[0].cityCode)
+      $(document).attr("cityAreaCodes", data.Data)
+      buildAreaButtons(data.Data[0].cityCode)
       $("#city-code-selector button")[0].click()
     ,
     error: ->

@@ -1,411 +1,1239 @@
-[{"cityCode" : "63000000", "cityName" : "臺北市", "areas" : 
-[{"areaCode" : "A010", "areaName" : "松山區"},
-{"areaCode" : "A020", "areaName" : "信義區"},
-{"areaCode" : "A030", "areaName" : "大安區"},
-{"areaCode" : "A040", "areaName" : "中山區"},
-{"areaCode" : "A050", "areaName" : "中正區"},
-{"areaCode" : "A060", "areaName" : "大同區"},
-{"areaCode" : "A070", "areaName" : "萬華區"},
-{"areaCode" : "A080", "areaName" : "文山區"},
-{"areaCode" : "A090", "areaName" : "南港區"},
-{"areaCode" : "A100", "areaName" : "內湖區"},
-{"areaCode" : "A110", "areaName" : "士林區"},
-{"areaCode" : "A120", "areaName" : "北投區"}]},
+{
+	"Version": "20140517",
+	"Data": [{
+			"cityCode": "63000000",
+			"cityName": "臺北市",
+			"areas": [{
+				"areaCode": "A010",
+				"areaName": "松山區"
+			}, {
+				"areaCode": "A020",
+				"areaName": "信義區"
+			}, {
+				"areaCode": "A030",
+				"areaName": "大安區"
+			}, {
+				"areaCode": "A040",
+				"areaName": "中山區"
+			}, {
+				"areaCode": "A050",
+				"areaName": "中正區"
+			}, {
+				"areaCode": "A060",
+				"areaName": "大同區"
+			}, {
+				"areaCode": "A070",
+				"areaName": "萬華區"
+			}, {
+				"areaCode": "A080",
+				"areaName": "文山區"
+			}, {
+				"areaCode": "A090",
+				"areaName": "南港區"
+			}, {
+				"areaCode": "A100",
+				"areaName": "內湖區"
+			}, {
+				"areaCode": "A110",
+				"areaName": "士林區"
+			}, {
+				"areaCode": "A120",
+				"areaName": "北投區"
+			}]
+		},
 
-{"cityCode" : "10003000", "cityName" : "桃園縣", "areas" : 				
-[{"areaCode" : "H010", "areaName" : "桃園市"},
-{"areaCode" : "H020", "areaName" : "中壢市"},
-{"areaCode" : "H030", "areaName" : "大溪鎮"},
-{"areaCode" : "H040", "areaName" : "楊梅市"},
-{"areaCode" : "H050", "areaName" : "蘆竹鄉"},
-{"areaCode" : "H060", "areaName" : "大園鄉"},
-{"areaCode" : "H070", "areaName" : "龜山鄉"},
-{"areaCode" : "H080", "areaName" : "八德市"},
-{"areaCode" : "H090", "areaName" : "龍潭鄉"},
-{"areaCode" : "H100", "areaName" : "平鎮市"},
-{"areaCode" : "H110", "areaName" : "新屋鄉"},
-{"areaCode" : "H120", "areaName" : "觀音鄉"},
-{"areaCode" : "H130", "areaName" : "復興鄉"}]},
+		{
+			"cityCode": "10003000",
+			"cityName": "桃園縣",
+			"areas": [{
+				"areaCode": "H010",
+				"areaName": "桃園市"
+			}, {
+				"areaCode": "H020",
+				"areaName": "中壢市"
+			}, {
+				"areaCode": "H030",
+				"areaName": "大溪鎮"
+			}, {
+				"areaCode": "H040",
+				"areaName": "楊梅市"
+			}, {
+				"areaCode": "H050",
+				"areaName": "蘆竹鄉"
+			}, {
+				"areaCode": "H060",
+				"areaName": "大園鄉"
+			}, {
+				"areaCode": "H070",
+				"areaName": "龜山鄉"
+			}, {
+				"areaCode": "H080",
+				"areaName": "八德市"
+			}, {
+				"areaCode": "H090",
+				"areaName": "龍潭鄉"
+			}, {
+				"areaCode": "H100",
+				"areaName": "平鎮市"
+			}, {
+				"areaCode": "H110",
+				"areaName": "新屋鄉"
+			}, {
+				"areaCode": "H120",
+				"areaName": "觀音鄉"
+			}, {
+				"areaCode": "H130",
+				"areaName": "復興鄉"
+			}]
+		},
 
-{"cityCode" : "10004000", "cityName" : "新竹縣", "areas" : 
-[{"areaCode" : "J010", "areaName" : "竹北市"},
-{"areaCode" : "J020", "areaName" : "竹東鎮"},
-{"areaCode" : "J030", "areaName" : "新埔鎮"},
-{"areaCode" : "J040", "areaName" : "關西鎮"},
-{"areaCode" : "J050", "areaName" : "湖口鄉"},
-{"areaCode" : "J060", "areaName" : "新豐鄉"},
-{"areaCode" : "J070", "areaName" : "芎林鄉"},
-{"areaCode" : "J080", "areaName" : "橫山鄉"},
-{"areaCode" : "J090", "areaName" : "北埔鄉"},
-{"areaCode" : "J100", "areaName" : "寶山鄉"},
-{"areaCode" : "J110", "areaName" : "峨眉鄉"},
-{"areaCode" : "J120", "areaName" : "尖石鄉"},
-{"areaCode" : "J130", "areaName" : "五峰鄉"}]},
+		{
+			"cityCode": "10004000",
+			"cityName": "新竹縣",
+			"areas": [{
+				"areaCode": "J010",
+				"areaName": "竹北市"
+			}, {
+				"areaCode": "J020",
+				"areaName": "竹東鎮"
+			}, {
+				"areaCode": "J030",
+				"areaName": "新埔鎮"
+			}, {
+				"areaCode": "J040",
+				"areaName": "關西鎮"
+			}, {
+				"areaCode": "J050",
+				"areaName": "湖口鄉"
+			}, {
+				"areaCode": "J060",
+				"areaName": "新豐鄉"
+			}, {
+				"areaCode": "J070",
+				"areaName": "芎林鄉"
+			}, {
+				"areaCode": "J080",
+				"areaName": "橫山鄉"
+			}, {
+				"areaCode": "J090",
+				"areaName": "北埔鄉"
+			}, {
+				"areaCode": "J100",
+				"areaName": "寶山鄉"
+			}, {
+				"areaCode": "J110",
+				"areaName": "峨眉鄉"
+			}, {
+				"areaCode": "J120",
+				"areaName": "尖石鄉"
+			}, {
+				"areaCode": "J130",
+				"areaName": "五峰鄉"
+			}]
+		},
 
-{"cityCode" : "10018000", "cityName" : "新竹市", "areas" : 
-[{"areaCode" : "O010", "areaName" : "東區"},
-{"areaCode" : "O020", "areaName" : "北區"},
-{"areaCode" : "O030", "areaName" : "香山區"}]},
+		{
+			"cityCode": "10018000",
+			"cityName": "新竹市",
+			"areas": [{
+				"areaCode": "O010",
+				"areaName": "東區"
+			}, {
+				"areaCode": "O020",
+				"areaName": "北區"
+			}, {
+				"areaCode": "O030",
+				"areaName": "香山區"
+			}]
+		},
 
-{"cityCode" : "10005000", "cityName" : "苗栗縣", "areas" : 
-[{"areaCode" : "K010", "areaName" : "苗栗市"},
-{"areaCode" : "K020", "areaName" : "苑裡鎮"},
-{"areaCode" : "K030", "areaName" : "通霄鎮"},
-{"areaCode" : "K040", "areaName" : "竹南鎮"},
-{"areaCode" : "K050", "areaName" : "頭份鎮"},
-{"areaCode" : "K060", "areaName" : "後龍鎮"},
-{"areaCode" : "K070", "areaName" : "卓蘭鎮"},
-{"areaCode" : "K080", "areaName" : "大湖鄉"},
-{"areaCode" : "K090", "areaName" : "公館鄉"},
-{"areaCode" : "K100", "areaName" : "銅鑼鄉"},
-{"areaCode" : "K110", "areaName" : "南庄鄉"},
-{"areaCode" : "K120", "areaName" : "頭屋鄉"},
-{"areaCode" : "K130", "areaName" : "三義鄉"},
-{"areaCode" : "K140", "areaName" : "西湖鄉"},
-{"areaCode" : "K150", "areaName" : "造橋鄉"},
-{"areaCode" : "K160", "areaName" : "三灣鄉"},
-{"areaCode" : "K170", "areaName" : "獅潭鄉"},
-{"areaCode" : "K180", "areaName" : "泰安鄉"}]},
+		{
+			"cityCode": "10005000",
+			"cityName": "苗栗縣",
+			"areas": [{
+				"areaCode": "K010",
+				"areaName": "苗栗市"
+			}, {
+				"areaCode": "K020",
+				"areaName": "苑裡鎮"
+			}, {
+				"areaCode": "K030",
+				"areaName": "通霄鎮"
+			}, {
+				"areaCode": "K040",
+				"areaName": "竹南鎮"
+			}, {
+				"areaCode": "K050",
+				"areaName": "頭份鎮"
+			}, {
+				"areaCode": "K060",
+				"areaName": "後龍鎮"
+			}, {
+				"areaCode": "K070",
+				"areaName": "卓蘭鎮"
+			}, {
+				"areaCode": "K080",
+				"areaName": "大湖鄉"
+			}, {
+				"areaCode": "K090",
+				"areaName": "公館鄉"
+			}, {
+				"areaCode": "K100",
+				"areaName": "銅鑼鄉"
+			}, {
+				"areaCode": "K110",
+				"areaName": "南庄鄉"
+			}, {
+				"areaCode": "K120",
+				"areaName": "頭屋鄉"
+			}, {
+				"areaCode": "K130",
+				"areaName": "三義鄉"
+			}, {
+				"areaCode": "K140",
+				"areaName": "西湖鄉"
+			}, {
+				"areaCode": "K150",
+				"areaName": "造橋鄉"
+			}, {
+				"areaCode": "K160",
+				"areaName": "三灣鄉"
+			}, {
+				"areaCode": "K170",
+				"areaName": "獅潭鄉"
+			}, {
+				"areaCode": "K180",
+				"areaName": "泰安鄉"
+			}]
+		},
 
-{"cityCode" : "66000000", "cityName" : "臺中市", "areas" : 
-[{"areaCode" : "B010", "areaName" : "中區"},
-{"areaCode" : "B020", "areaName" : "東區"},
-{"areaCode" : "B030", "areaName" : "南區"},
-{"areaCode" : "B040", "areaName" : "西區"},
-{"areaCode" : "B050", "areaName" : "北區"},
-{"areaCode" : "B060", "areaName" : "西屯區"},
-{"areaCode" : "B070", "areaName" : "南屯區"},
-{"areaCode" : "B080", "areaName" : "北屯區"},
-{"areaCode" : "B090", "areaName" : "豐原區"},
-{"areaCode" : "B100", "areaName" : "東勢區"},
-{"areaCode" : "B110", "areaName" : "大甲區"},
-{"areaCode" : "B120", "areaName" : "清水區"},
-{"areaCode" : "B130", "areaName" : "沙鹿區"},
-{"areaCode" : "B140", "areaName" : "梧棲區"},
-{"areaCode" : "B150", "areaName" : "后里區"},
-{"areaCode" : "B160", "areaName" : "神岡區"},
-{"areaCode" : "B170", "areaName" : "潭子區"},
-{"areaCode" : "B180", "areaName" : "大雅區"},
-{"areaCode" : "B190", "areaName" : "新社區"},
-{"areaCode" : "B200", "areaName" : "石岡區"},
-{"areaCode" : "B210", "areaName" : "外埔區"},
-{"areaCode" : "B220", "areaName" : "大安區"},
-{"areaCode" : "B230", "areaName" : "烏日區"},
-{"areaCode" : "B240", "areaName" : "大肚區"},
-{"areaCode" : "B250", "areaName" : "龍井區"},
-{"areaCode" : "B260", "areaName" : "霧峰區"},
-{"areaCode" : "B270", "areaName" : "太平區"},
-{"areaCode" : "B280", "areaName" : "大里區"},
-{"areaCode" : "B290", "areaName" : "和平區"}]},
+		{
+			"cityCode": "66000000",
+			"cityName": "臺中市",
+			"areas": [{
+				"areaCode": "B010",
+				"areaName": "中區"
+			}, {
+				"areaCode": "B020",
+				"areaName": "東區"
+			}, {
+				"areaCode": "B030",
+				"areaName": "南區"
+			}, {
+				"areaCode": "B040",
+				"areaName": "西區"
+			}, {
+				"areaCode": "B050",
+				"areaName": "北區"
+			}, {
+				"areaCode": "B060",
+				"areaName": "西屯區"
+			}, {
+				"areaCode": "B070",
+				"areaName": "南屯區"
+			}, {
+				"areaCode": "B080",
+				"areaName": "北屯區"
+			}, {
+				"areaCode": "B090",
+				"areaName": "豐原區"
+			}, {
+				"areaCode": "B100",
+				"areaName": "東勢區"
+			}, {
+				"areaCode": "B110",
+				"areaName": "大甲區"
+			}, {
+				"areaCode": "B120",
+				"areaName": "清水區"
+			}, {
+				"areaCode": "B130",
+				"areaName": "沙鹿區"
+			}, {
+				"areaCode": "B140",
+				"areaName": "梧棲區"
+			}, {
+				"areaCode": "B150",
+				"areaName": "后里區"
+			}, {
+				"areaCode": "B160",
+				"areaName": "神岡區"
+			}, {
+				"areaCode": "B170",
+				"areaName": "潭子區"
+			}, {
+				"areaCode": "B180",
+				"areaName": "大雅區"
+			}, {
+				"areaCode": "B190",
+				"areaName": "新社區"
+			}, {
+				"areaCode": "B200",
+				"areaName": "石岡區"
+			}, {
+				"areaCode": "B210",
+				"areaName": "外埔區"
+			}, {
+				"areaCode": "B220",
+				"areaName": "大安區"
+			}, {
+				"areaCode": "B230",
+				"areaName": "烏日區"
+			}, {
+				"areaCode": "B240",
+				"areaName": "大肚區"
+			}, {
+				"areaCode": "B250",
+				"areaName": "龍井區"
+			}, {
+				"areaCode": "B260",
+				"areaName": "霧峰區"
+			}, {
+				"areaCode": "B270",
+				"areaName": "太平區"
+			}, {
+				"areaCode": "B280",
+				"areaName": "大里區"
+			}, {
+				"areaCode": "B290",
+				"areaName": "和平區"
+			}]
+		},
 
-{"cityCode" : "10007000", "cityName" : "彰化縣", "areas" : 
-[{"areaCode" : "N010", "areaName" : "彰化市"},
-{"areaCode" : "N020", "areaName" : "鹿港鎮"},
-{"areaCode" : "N030", "areaName" : "和美鎮"},
-{"areaCode" : "N040", "areaName" : "線西鄉"},
-{"areaCode" : "N050", "areaName" : "伸港鄉"},
-{"areaCode" : "N060", "areaName" : "福興鄉"},
-{"areaCode" : "N070", "areaName" : "秀水鄉"},
-{"areaCode" : "N080", "areaName" : "花壇鄉"},
-{"areaCode" : "N090", "areaName" : "芬園鄉"},
-{"areaCode" : "N100", "areaName" : "員林鎮"},
-{"areaCode" : "N110", "areaName" : "溪湖鎮"},
-{"areaCode" : "N120", "areaName" : "田中鎮"},
-{"areaCode" : "N130", "areaName" : "大村鄉"},
-{"areaCode" : "N140", "areaName" : "埔鹽鄉"},
-{"areaCode" : "N150", "areaName" : "埔心鄉"},
-{"areaCode" : "N160", "areaName" : "永靖鄉"},
-{"areaCode" : "N170", "areaName" : "社頭鄉"},
-{"areaCode" : "N180", "areaName" : "二水鄉"},
-{"areaCode" : "N190", "areaName" : "北斗鎮"},
-{"areaCode" : "N200", "areaName" : "二林鎮"},
-{"areaCode" : "N210", "areaName" : "田尾鄉"},
-{"areaCode" : "N220", "areaName" : "埤頭鄉"},
-{"areaCode" : "N230", "areaName" : "芳苑鄉"},
-{"areaCode" : "N240", "areaName" : "大城鄉"},
-{"areaCode" : "N250", "areaName" : "竹塘鄉"},
-{"areaCode" : "N260", "areaName" : "溪州鄉"}]},
+		{
+			"cityCode": "10007000",
+			"cityName": "彰化縣",
+			"areas": [{
+				"areaCode": "N010",
+				"areaName": "彰化市"
+			}, {
+				"areaCode": "N020",
+				"areaName": "鹿港鎮"
+			}, {
+				"areaCode": "N030",
+				"areaName": "和美鎮"
+			}, {
+				"areaCode": "N040",
+				"areaName": "線西鄉"
+			}, {
+				"areaCode": "N050",
+				"areaName": "伸港鄉"
+			}, {
+				"areaCode": "N060",
+				"areaName": "福興鄉"
+			}, {
+				"areaCode": "N070",
+				"areaName": "秀水鄉"
+			}, {
+				"areaCode": "N080",
+				"areaName": "花壇鄉"
+			}, {
+				"areaCode": "N090",
+				"areaName": "芬園鄉"
+			}, {
+				"areaCode": "N100",
+				"areaName": "員林鎮"
+			}, {
+				"areaCode": "N110",
+				"areaName": "溪湖鎮"
+			}, {
+				"areaCode": "N120",
+				"areaName": "田中鎮"
+			}, {
+				"areaCode": "N130",
+				"areaName": "大村鄉"
+			}, {
+				"areaCode": "N140",
+				"areaName": "埔鹽鄉"
+			}, {
+				"areaCode": "N150",
+				"areaName": "埔心鄉"
+			}, {
+				"areaCode": "N160",
+				"areaName": "永靖鄉"
+			}, {
+				"areaCode": "N170",
+				"areaName": "社頭鄉"
+			}, {
+				"areaCode": "N180",
+				"areaName": "二水鄉"
+			}, {
+				"areaCode": "N190",
+				"areaName": "北斗鎮"
+			}, {
+				"areaCode": "N200",
+				"areaName": "二林鎮"
+			}, {
+				"areaCode": "N210",
+				"areaName": "田尾鄉"
+			}, {
+				"areaCode": "N220",
+				"areaName": "埤頭鄉"
+			}, {
+				"areaCode": "N230",
+				"areaName": "芳苑鄉"
+			}, {
+				"areaCode": "N240",
+				"areaName": "大城鄉"
+			}, {
+				"areaCode": "N250",
+				"areaName": "竹塘鄉"
+			}, {
+				"areaCode": "N260",
+				"areaName": "溪州鄉"
+			}]
+		},
 
-{"cityCode" : "10009000", "cityName" : "雲林縣", "areas" : 
-[{"areaCode" : "P010", "areaName" : "斗六市"},
-{"areaCode" : "P020", "areaName" : "斗南鎮"},
-{"areaCode" : "P030", "areaName" : "虎尾鎮"},
-{"areaCode" : "P040", "areaName" : "西螺鎮"},
-{"areaCode" : "P050", "areaName" : "土庫鎮"},
-{"areaCode" : "P060", "areaName" : "北港鎮"},
-{"areaCode" : "P070", "areaName" : "古坑鄉"},
-{"areaCode" : "P080", "areaName" : "大埤鄉"},
-{"areaCode" : "P090", "areaName" : "莿桐鄉"},
-{"areaCode" : "P100", "areaName" : "林內鄉"},
-{"areaCode" : "P110", "areaName" : "二崙鄉"},
-{"areaCode" : "P120", "areaName" : "崙背鄉"},
-{"areaCode" : "P130", "areaName" : "麥寮鄉"},
-{"areaCode" : "P140", "areaName" : "東勢鄉"},
-{"areaCode" : "P150", "areaName" : "褒忠鄉"},
-{"areaCode" : "P160", "areaName" : "臺西鄉"},
-{"areaCode" : "P170", "areaName" : "元長鄉"},
-{"areaCode" : "P180", "areaName" : "四湖鄉"},
-{"areaCode" : "P190", "areaName" : "口湖鄉"},
-{"areaCode" : "P200", "areaName" : "水林鄉"}]},
+		{
+			"cityCode": "10009000",
+			"cityName": "雲林縣",
+			"areas": [{
+				"areaCode": "P010",
+				"areaName": "斗六市"
+			}, {
+				"areaCode": "P020",
+				"areaName": "斗南鎮"
+			}, {
+				"areaCode": "P030",
+				"areaName": "虎尾鎮"
+			}, {
+				"areaCode": "P040",
+				"areaName": "西螺鎮"
+			}, {
+				"areaCode": "P050",
+				"areaName": "土庫鎮"
+			}, {
+				"areaCode": "P060",
+				"areaName": "北港鎮"
+			}, {
+				"areaCode": "P070",
+				"areaName": "古坑鄉"
+			}, {
+				"areaCode": "P080",
+				"areaName": "大埤鄉"
+			}, {
+				"areaCode": "P090",
+				"areaName": "莿桐鄉"
+			}, {
+				"areaCode": "P100",
+				"areaName": "林內鄉"
+			}, {
+				"areaCode": "P110",
+				"areaName": "二崙鄉"
+			}, {
+				"areaCode": "P120",
+				"areaName": "崙背鄉"
+			}, {
+				"areaCode": "P130",
+				"areaName": "麥寮鄉"
+			}, {
+				"areaCode": "P140",
+				"areaName": "東勢鄉"
+			}, {
+				"areaCode": "P150",
+				"areaName": "褒忠鄉"
+			}, {
+				"areaCode": "P160",
+				"areaName": "臺西鄉"
+			}, {
+				"areaCode": "P170",
+				"areaName": "元長鄉"
+			}, {
+				"areaCode": "P180",
+				"areaName": "四湖鄉"
+			}, {
+				"areaCode": "P190",
+				"areaName": "口湖鄉"
+			}, {
+				"areaCode": "P200",
+				"areaName": "水林鄉"
+			}]
+		},
 
-{"cityCode" : "10010000", "cityName" : "嘉義縣", "areas" : 
-[{"areaCode" : "Q010", "areaName" : "太保市"},
-{"areaCode" : "Q020", "areaName" : "朴子市"},
-{"areaCode" : "Q030", "areaName" : "布袋鎮"},
-{"areaCode" : "Q040", "areaName" : "大林鎮"},
-{"areaCode" : "Q050", "areaName" : "民雄鄉"},
-{"areaCode" : "Q060", "areaName" : "溪口鄉"},
-{"areaCode" : "Q070", "areaName" : "新港鄉"},
-{"areaCode" : "Q080", "areaName" : "六腳鄉"},
-{"areaCode" : "Q090", "areaName" : "東石鄉"},
-{"areaCode" : "Q100", "areaName" : "義竹鄉"},
-{"areaCode" : "Q110", "areaName" : "鹿草鄉"},
-{"areaCode" : "Q120", "areaName" : "水上鄉"},
-{"areaCode" : "Q130", "areaName" : "中埔鄉"},
-{"areaCode" : "Q140", "areaName" : "竹崎鄉"},
-{"areaCode" : "Q150", "areaName" : "梅山鄉"},
-{"areaCode" : "Q160", "areaName" : "番路鄉"},
-{"areaCode" : "Q170", "areaName" : "大埔鄉"},
-{"areaCode" : "Q180", "areaName" : "阿里山鄉"}]},
+		{
+			"cityCode": "10010000",
+			"cityName": "嘉義縣",
+			"areas": [{
+				"areaCode": "Q010",
+				"areaName": "太保市"
+			}, {
+				"areaCode": "Q020",
+				"areaName": "朴子市"
+			}, {
+				"areaCode": "Q030",
+				"areaName": "布袋鎮"
+			}, {
+				"areaCode": "Q040",
+				"areaName": "大林鎮"
+			}, {
+				"areaCode": "Q050",
+				"areaName": "民雄鄉"
+			}, {
+				"areaCode": "Q060",
+				"areaName": "溪口鄉"
+			}, {
+				"areaCode": "Q070",
+				"areaName": "新港鄉"
+			}, {
+				"areaCode": "Q080",
+				"areaName": "六腳鄉"
+			}, {
+				"areaCode": "Q090",
+				"areaName": "東石鄉"
+			}, {
+				"areaCode": "Q100",
+				"areaName": "義竹鄉"
+			}, {
+				"areaCode": "Q110",
+				"areaName": "鹿草鄉"
+			}, {
+				"areaCode": "Q120",
+				"areaName": "水上鄉"
+			}, {
+				"areaCode": "Q130",
+				"areaName": "中埔鄉"
+			}, {
+				"areaCode": "Q140",
+				"areaName": "竹崎鄉"
+			}, {
+				"areaCode": "Q150",
+				"areaName": "梅山鄉"
+			}, {
+				"areaCode": "Q160",
+				"areaName": "番路鄉"
+			}, {
+				"areaCode": "Q170",
+				"areaName": "大埔鄉"
+			}, {
+				"areaCode": "Q180",
+				"areaName": "阿里山鄉"
+			}]
+		},
 
-{"cityCode" : "10020000", "cityName" : "嘉義市", "areas" : 
-[{"areaCode" : "I010", "areaName" : "東區"},
-{"areaCode" : "I020", "areaName" : "西區"}]},
+		{
+			"cityCode": "10020000",
+			"cityName": "嘉義市",
+			"areas": [{
+				"areaCode": "I010",
+				"areaName": "東區"
+			}, {
+				"areaCode": "I020",
+				"areaName": "西區"
+			}]
+		},
 
-{"cityCode" : "67000000", "cityName" : "臺南市", "areas" : 
-[{"areaCode" : "D010", "areaName" : "新營區"},
-{"areaCode" : "D020", "areaName" : "鹽水區"},
-{"areaCode" : "D030", "areaName" : "白河區"},
-{"areaCode" : "D040", "areaName" : "柳營區"},
-{"areaCode" : "D050", "areaName" : "後壁區"},
-{"areaCode" : "D060", "areaName" : "東山區"},
-{"areaCode" : "D070", "areaName" : "麻豆區"},
-{"areaCode" : "D080", "areaName" : "下營區"},
-{"areaCode" : "D090", "areaName" : "六甲區"},
-{"areaCode" : "D100", "areaName" : "官田區"},
-{"areaCode" : "D110", "areaName" : "大內區"},
-{"areaCode" : "D120", "areaName" : "佳里區"},
-{"areaCode" : "D130", "areaName" : "學甲區"},
-{"areaCode" : "D140", "areaName" : "西港區"},
-{"areaCode" : "D150", "areaName" : "七股區"},
-{"areaCode" : "D160", "areaName" : "將軍區"},
-{"areaCode" : "D170", "areaName" : "北門區"},
-{"areaCode" : "D180", "areaName" : "新化區"},
-{"areaCode" : "D190", "areaName" : "善化區"},
-{"areaCode" : "D200", "areaName" : "新市區"},
-{"areaCode" : "D210", "areaName" : "安定區"},
-{"areaCode" : "D220", "areaName" : "山上區"},
-{"areaCode" : "D230", "areaName" : "玉井區"},
-{"areaCode" : "D240", "areaName" : "楠西區"},
-{"areaCode" : "D250", "areaName" : "南化區"},
-{"areaCode" : "D260", "areaName" : "左鎮區"},
-{"areaCode" : "D270", "areaName" : "仁德區"},
-{"areaCode" : "D280", "areaName" : "歸仁區"},
-{"areaCode" : "D290", "areaName" : "關廟區"},
-{"areaCode" : "D300", "areaName" : "龍崎區"},
-{"areaCode" : "D310", "areaName" : "永康區"},
-{"areaCode" : "D320", "areaName" : "東區"},
-{"areaCode" : "D330", "areaName" : "南區"},
-{"areaCode" : "D340", "areaName" : "北區"},
-{"areaCode" : "D350", "areaName" : "安南區"},
-{"areaCode" : "D360", "areaName" : "安平區"},
-{"areaCode" : "D370", "areaName" : "中西區"}]},
+		{
+			"cityCode": "67000000",
+			"cityName": "臺南市",
+			"areas": [{
+				"areaCode": "D010",
+				"areaName": "新營區"
+			}, {
+				"areaCode": "D020",
+				"areaName": "鹽水區"
+			}, {
+				"areaCode": "D030",
+				"areaName": "白河區"
+			}, {
+				"areaCode": "D040",
+				"areaName": "柳營區"
+			}, {
+				"areaCode": "D050",
+				"areaName": "後壁區"
+			}, {
+				"areaCode": "D060",
+				"areaName": "東山區"
+			}, {
+				"areaCode": "D070",
+				"areaName": "麻豆區"
+			}, {
+				"areaCode": "D080",
+				"areaName": "下營區"
+			}, {
+				"areaCode": "D090",
+				"areaName": "六甲區"
+			}, {
+				"areaCode": "D100",
+				"areaName": "官田區"
+			}, {
+				"areaCode": "D110",
+				"areaName": "大內區"
+			}, {
+				"areaCode": "D120",
+				"areaName": "佳里區"
+			}, {
+				"areaCode": "D130",
+				"areaName": "學甲區"
+			}, {
+				"areaCode": "D140",
+				"areaName": "西港區"
+			}, {
+				"areaCode": "D150",
+				"areaName": "七股區"
+			}, {
+				"areaCode": "D160",
+				"areaName": "將軍區"
+			}, {
+				"areaCode": "D170",
+				"areaName": "北門區"
+			}, {
+				"areaCode": "D180",
+				"areaName": "新化區"
+			}, {
+				"areaCode": "D190",
+				"areaName": "善化區"
+			}, {
+				"areaCode": "D200",
+				"areaName": "新市區"
+			}, {
+				"areaCode": "D210",
+				"areaName": "安定區"
+			}, {
+				"areaCode": "D220",
+				"areaName": "山上區"
+			}, {
+				"areaCode": "D230",
+				"areaName": "玉井區"
+			}, {
+				"areaCode": "D240",
+				"areaName": "楠西區"
+			}, {
+				"areaCode": "D250",
+				"areaName": "南化區"
+			}, {
+				"areaCode": "D260",
+				"areaName": "左鎮區"
+			}, {
+				"areaCode": "D270",
+				"areaName": "仁德區"
+			}, {
+				"areaCode": "D280",
+				"areaName": "歸仁區"
+			}, {
+				"areaCode": "D290",
+				"areaName": "關廟區"
+			}, {
+				"areaCode": "D300",
+				"areaName": "龍崎區"
+			}, {
+				"areaCode": "D310",
+				"areaName": "永康區"
+			}, {
+				"areaCode": "D320",
+				"areaName": "東區"
+			}, {
+				"areaCode": "D330",
+				"areaName": "南區"
+			}, {
+				"areaCode": "D340",
+				"areaName": "北區"
+			}, {
+				"areaCode": "D350",
+				"areaName": "安南區"
+			}, {
+				"areaCode": "D360",
+				"areaName": "安平區"
+			}, {
+				"areaCode": "D370",
+				"areaName": "中西區"
+			}]
+		},
 
-{"cityCode" : "64000000", "cityName" : "高雄市", "areas" : 
-[{"areaCode" : "E010", "areaName" : "鹽埕區"},
-{"areaCode" : "E020", "areaName" : "鼓山區"},
-{"areaCode" : "E030", "areaName" : "左營區"},
-{"areaCode" : "E040", "areaName" : "楠梓區"},
-{"areaCode" : "E050", "areaName" : "三民區"},
-{"areaCode" : "E060", "areaName" : "新興區"},
-{"areaCode" : "E070", "areaName" : "前金區"},
-{"areaCode" : "E080", "areaName" : "苓雅區"},
-{"areaCode" : "E090", "areaName" : "前鎮區"},
-{"areaCode" : "E100", "areaName" : "旗津區"},
-{"areaCode" : "E110", "areaName" : "小港區"},
-{"areaCode" : "E120", "areaName" : "鳳山區"},
-{"areaCode" : "E130", "areaName" : "林園區"},
-{"areaCode" : "E140", "areaName" : "大寮區"},
-{"areaCode" : "E150", "areaName" : "大樹區"},
-{"areaCode" : "E160", "areaName" : "大社區"},
-{"areaCode" : "E170", "areaName" : "仁武區"},
-{"areaCode" : "E180", "areaName" : "鳥松區"},
-{"areaCode" : "E190", "areaName" : "岡山區"},
-{"areaCode" : "E200", "areaName" : "橋頭區"},
-{"areaCode" : "E210", "areaName" : "燕巢區"},
-{"areaCode" : "E220", "areaName" : "田寮區"},
-{"areaCode" : "E230", "areaName" : "阿蓮區"},
-{"areaCode" : "E240", "areaName" : "路竹區"},
-{"areaCode" : "E250", "areaName" : "湖內區"},
-{"areaCode" : "E260", "areaName" : "茄萣區"},
-{"areaCode" : "E270", "areaName" : "永安區"},
-{"areaCode" : "E280", "areaName" : "彌陀區"},
-{"areaCode" : "E290", "areaName" : "梓官區"},
-{"areaCode" : "E300", "areaName" : "旗山區"},
-{"areaCode" : "E310", "areaName" : "美濃區"},
-{"areaCode" : "E320", "areaName" : "六龜區"},
-{"areaCode" : "E330", "areaName" : "甲仙區"},
-{"areaCode" : "E340", "areaName" : "杉林區"},
-{"areaCode" : "E350", "areaName" : "內門區"},
-{"areaCode" : "E360", "areaName" : "茂林區"},
-{"areaCode" : "E370", "areaName" : "桃源區"},
-{"areaCode" : "E380", "areaName" : "那瑪夏區"}]},
+		{
+			"cityCode": "64000000",
+			"cityName": "高雄市",
+			"areas": [{
+				"areaCode": "E010",
+				"areaName": "鹽埕區"
+			}, {
+				"areaCode": "E020",
+				"areaName": "鼓山區"
+			}, {
+				"areaCode": "E030",
+				"areaName": "左營區"
+			}, {
+				"areaCode": "E040",
+				"areaName": "楠梓區"
+			}, {
+				"areaCode": "E050",
+				"areaName": "三民區"
+			}, {
+				"areaCode": "E060",
+				"areaName": "新興區"
+			}, {
+				"areaCode": "E070",
+				"areaName": "前金區"
+			}, {
+				"areaCode": "E080",
+				"areaName": "苓雅區"
+			}, {
+				"areaCode": "E090",
+				"areaName": "前鎮區"
+			}, {
+				"areaCode": "E100",
+				"areaName": "旗津區"
+			}, {
+				"areaCode": "E110",
+				"areaName": "小港區"
+			}, {
+				"areaCode": "E120",
+				"areaName": "鳳山區"
+			}, {
+				"areaCode": "E130",
+				"areaName": "林園區"
+			}, {
+				"areaCode": "E140",
+				"areaName": "大寮區"
+			}, {
+				"areaCode": "E150",
+				"areaName": "大樹區"
+			}, {
+				"areaCode": "E160",
+				"areaName": "大社區"
+			}, {
+				"areaCode": "E170",
+				"areaName": "仁武區"
+			}, {
+				"areaCode": "E180",
+				"areaName": "鳥松區"
+			}, {
+				"areaCode": "E190",
+				"areaName": "岡山區"
+			}, {
+				"areaCode": "E200",
+				"areaName": "橋頭區"
+			}, {
+				"areaCode": "E210",
+				"areaName": "燕巢區"
+			}, {
+				"areaCode": "E220",
+				"areaName": "田寮區"
+			}, {
+				"areaCode": "E230",
+				"areaName": "阿蓮區"
+			}, {
+				"areaCode": "E240",
+				"areaName": "路竹區"
+			}, {
+				"areaCode": "E250",
+				"areaName": "湖內區"
+			}, {
+				"areaCode": "E260",
+				"areaName": "茄萣區"
+			}, {
+				"areaCode": "E270",
+				"areaName": "永安區"
+			}, {
+				"areaCode": "E280",
+				"areaName": "彌陀區"
+			}, {
+				"areaCode": "E290",
+				"areaName": "梓官區"
+			}, {
+				"areaCode": "E300",
+				"areaName": "旗山區"
+			}, {
+				"areaCode": "E310",
+				"areaName": "美濃區"
+			}, {
+				"areaCode": "E320",
+				"areaName": "六龜區"
+			}, {
+				"areaCode": "E330",
+				"areaName": "甲仙區"
+			}, {
+				"areaCode": "E340",
+				"areaName": "杉林區"
+			}, {
+				"areaCode": "E350",
+				"areaName": "內門區"
+			}, {
+				"areaCode": "E360",
+				"areaName": "茂林區"
+			}, {
+				"areaCode": "E370",
+				"areaName": "桃源區"
+			}, {
+				"areaCode": "E380",
+				"areaName": "那瑪夏區"
+			}]
+		},
 
-{"cityCode" : "10013000", "cityName" : "屏東縣", "areas" : 
-[{"areaCode" : "T010", "areaName" : "屏東市"},
-{"areaCode" : "T020", "areaName" : "潮州鎮"},
-{"areaCode" : "T030", "areaName" : "東港鎮"},
-{"areaCode" : "T040", "areaName" : "恆春鎮"},
-{"areaCode" : "T050", "areaName" : "萬丹鄉"},
-{"areaCode" : "T060", "areaName" : "長治鄉"},
-{"areaCode" : "T070", "areaName" : "麟洛鄉"},
-{"areaCode" : "T080", "areaName" : "九如鄉"},
-{"areaCode" : "T090", "areaName" : "里港鄉"},
-{"areaCode" : "T100", "areaName" : "鹽埔鄉"},
-{"areaCode" : "T110", "areaName" : "高樹鄉"},
-{"areaCode" : "T120", "areaName" : "萬巒鄉"},
-{"areaCode" : "T130", "areaName" : "內埔鄉"},
-{"areaCode" : "T140", "areaName" : "竹田鄉"},
-{"areaCode" : "T150", "areaName" : "新埤鄉"},
-{"areaCode" : "T160", "areaName" : "枋寮鄉"},
-{"areaCode" : "T170", "areaName" : "新園鄉"},
-{"areaCode" : "T180", "areaName" : "坎頂鄉"},
-{"areaCode" : "T190", "areaName" : "林邊鄉"},
-{"areaCode" : "T200", "areaName" : "南州鄉"},
-{"areaCode" : "T210", "areaName" : "佳冬鄉"},
-{"areaCode" : "T220", "areaName" : "琉球鄉"},
-{"areaCode" : "T230", "areaName" : "車城鄉"},
-{"areaCode" : "T240", "areaName" : "滿州鄉"},
-{"areaCode" : "T250", "areaName" : "枋山鄉"},
-{"areaCode" : "T260", "areaName" : "三地門鄉"},
-{"areaCode" : "T270", "areaName" : "霧臺鄉"},
-{"areaCode" : "T280", "areaName" : "瑪家鄉"},
-{"areaCode" : "T290", "areaName" : "泰武鄉"},
-{"areaCode" : "T300", "areaName" : "來義鄉"},
-{"areaCode" : "T310", "areaName" : "春日鄉"},
-{"areaCode" : "T320", "areaName" : "獅子鄉"},
-{"areaCode" : "T330", "areaName" : "牡丹鄉"}]},
+		{
+			"cityCode": "10013000",
+			"cityName": "屏東縣",
+			"areas": [{
+				"areaCode": "T010",
+				"areaName": "屏東市"
+			}, {
+				"areaCode": "T020",
+				"areaName": "潮州鎮"
+			}, {
+				"areaCode": "T030",
+				"areaName": "東港鎮"
+			}, {
+				"areaCode": "T040",
+				"areaName": "恆春鎮"
+			}, {
+				"areaCode": "T050",
+				"areaName": "萬丹鄉"
+			}, {
+				"areaCode": "T060",
+				"areaName": "長治鄉"
+			}, {
+				"areaCode": "T070",
+				"areaName": "麟洛鄉"
+			}, {
+				"areaCode": "T080",
+				"areaName": "九如鄉"
+			}, {
+				"areaCode": "T090",
+				"areaName": "里港鄉"
+			}, {
+				"areaCode": "T100",
+				"areaName": "鹽埔鄉"
+			}, {
+				"areaCode": "T110",
+				"areaName": "高樹鄉"
+			}, {
+				"areaCode": "T120",
+				"areaName": "萬巒鄉"
+			}, {
+				"areaCode": "T130",
+				"areaName": "內埔鄉"
+			}, {
+				"areaCode": "T140",
+				"areaName": "竹田鄉"
+			}, {
+				"areaCode": "T150",
+				"areaName": "新埤鄉"
+			}, {
+				"areaCode": "T160",
+				"areaName": "枋寮鄉"
+			}, {
+				"areaCode": "T170",
+				"areaName": "新園鄉"
+			}, {
+				"areaCode": "T180",
+				"areaName": "坎頂鄉"
+			}, {
+				"areaCode": "T190",
+				"areaName": "林邊鄉"
+			}, {
+				"areaCode": "T200",
+				"areaName": "南州鄉"
+			}, {
+				"areaCode": "T210",
+				"areaName": "佳冬鄉"
+			}, {
+				"areaCode": "T220",
+				"areaName": "琉球鄉"
+			}, {
+				"areaCode": "T230",
+				"areaName": "車城鄉"
+			}, {
+				"areaCode": "T240",
+				"areaName": "滿州鄉"
+			}, {
+				"areaCode": "T250",
+				"areaName": "枋山鄉"
+			}, {
+				"areaCode": "T260",
+				"areaName": "三地門鄉"
+			}, {
+				"areaCode": "T270",
+				"areaName": "霧臺鄉"
+			}, {
+				"areaCode": "T280",
+				"areaName": "瑪家鄉"
+			}, {
+				"areaCode": "T290",
+				"areaName": "泰武鄉"
+			}, {
+				"areaCode": "T300",
+				"areaName": "來義鄉"
+			}, {
+				"areaCode": "T310",
+				"areaName": "春日鄉"
+			}, {
+				"areaCode": "T320",
+				"areaName": "獅子鄉"
+			}, {
+				"areaCode": "T330",
+				"areaName": "牡丹鄉"
+			}]
+		},
 
-{"cityCode" : "10014000", "cityName" : "臺東縣", "areas" : 
-[{"areaCode" : "V010", "areaName" : "臺東市"},
-{"areaCode" : "V020", "areaName" : "成功鎮"},
-{"areaCode" : "V030", "areaName" : "關山鎮"},
-{"areaCode" : "V040", "areaName" : "卑南鄉"},
-{"areaCode" : "V050", "areaName" : "鹿野鄉"},
-{"areaCode" : "V060", "areaName" : "池上鄉"},
-{"areaCode" : "V070", "areaName" : "東河鄉"},
-{"areaCode" : "V080", "areaName" : "長濱鄉"},
-{"areaCode" : "V090", "areaName" : "太麻里鄉"},
-{"areaCode" : "V100", "areaName" : "大武鄉"},
-{"areaCode" : "V110", "areaName" : "綠島鄉"},
-{"areaCode" : "V120", "areaName" : "海端鄉"},
-{"areaCode" : "V130", "areaName" : "延平鄉"},
-{"areaCode" : "V140", "areaName" : "金峰鄉"},
-{"areaCode" : "V150", "areaName" : "達仁鄉"},
-{"areaCode" : "V160", "areaName" : "蘭嶼鄉"}]},
+		{
+			"cityCode": "10014000",
+			"cityName": "臺東縣",
+			"areas": [{
+				"areaCode": "V010",
+				"areaName": "臺東市"
+			}, {
+				"areaCode": "V020",
+				"areaName": "成功鎮"
+			}, {
+				"areaCode": "V030",
+				"areaName": "關山鎮"
+			}, {
+				"areaCode": "V040",
+				"areaName": "卑南鄉"
+			}, {
+				"areaCode": "V050",
+				"areaName": "鹿野鄉"
+			}, {
+				"areaCode": "V060",
+				"areaName": "池上鄉"
+			}, {
+				"areaCode": "V070",
+				"areaName": "東河鄉"
+			}, {
+				"areaCode": "V080",
+				"areaName": "長濱鄉"
+			}, {
+				"areaCode": "V090",
+				"areaName": "太麻里鄉"
+			}, {
+				"areaCode": "V100",
+				"areaName": "大武鄉"
+			}, {
+				"areaCode": "V110",
+				"areaName": "綠島鄉"
+			}, {
+				"areaCode": "V120",
+				"areaName": "海端鄉"
+			}, {
+				"areaCode": "V130",
+				"areaName": "延平鄉"
+			}, {
+				"areaCode": "V140",
+				"areaName": "金峰鄉"
+			}, {
+				"areaCode": "V150",
+				"areaName": "達仁鄉"
+			}, {
+				"areaCode": "V160",
+				"areaName": "蘭嶼鄉"
+			}]
+		},
 
-{"cityCode" : "10015000", "cityName" : "花蓮縣", "areas" : 
-[{"areaCode" : "U010", "areaName" : "花蓮市"},
-{"areaCode" : "U020", "areaName" : "鳳林鎮"},
-{"areaCode" : "U030", "areaName" : "玉里鎮"},
-{"areaCode" : "U040", "areaName" : "新城鄉"},
-{"areaCode" : "U050", "areaName" : "吉安鄉"},
-{"areaCode" : "U060", "areaName" : "壽豐鄉"},
-{"areaCode" : "U070", "areaName" : "光復鄉"},
-{"areaCode" : "U080", "areaName" : "豐濱鄉"},
-{"areaCode" : "U090", "areaName" : "瑞穗鄉"},
-{"areaCode" : "U100", "areaName" : "富里鄉"},
-{"areaCode" : "U110", "areaName" : "秀林鄉"},
-{"areaCode" : "U120", "areaName" : "萬榮鄉"},
-{"areaCode" : "U130", "areaName" : "卓溪鄉"}]},
+		{
+			"cityCode": "10015000",
+			"cityName": "花蓮縣",
+			"areas": [{
+				"areaCode": "U010",
+				"areaName": "花蓮市"
+			}, {
+				"areaCode": "U020",
+				"areaName": "鳳林鎮"
+			}, {
+				"areaCode": "U030",
+				"areaName": "玉里鎮"
+			}, {
+				"areaCode": "U040",
+				"areaName": "新城鄉"
+			}, {
+				"areaCode": "U050",
+				"areaName": "吉安鄉"
+			}, {
+				"areaCode": "U060",
+				"areaName": "壽豐鄉"
+			}, {
+				"areaCode": "U070",
+				"areaName": "光復鄉"
+			}, {
+				"areaCode": "U080",
+				"areaName": "豐濱鄉"
+			}, {
+				"areaCode": "U090",
+				"areaName": "瑞穗鄉"
+			}, {
+				"areaCode": "U100",
+				"areaName": "富里鄉"
+			}, {
+				"areaCode": "U110",
+				"areaName": "秀林鄉"
+			}, {
+				"areaCode": "U120",
+				"areaName": "萬榮鄉"
+			}, {
+				"areaCode": "U130",
+				"areaName": "卓溪鄉"
+			}]
+		},
 
-{"cityCode" : "10002000", "cityName" : "宜蘭縣", "areas" : 
-[{"areaCode" : "G010", "areaName" : "宜蘭市"},
-{"areaCode" : "G020", "areaName" : "羅東鎮"},
-{"areaCode" : "G030", "areaName" : "蘇澳鎮"},
-{"areaCode" : "G040", "areaName" : "頭城鎮"},
-{"areaCode" : "G050", "areaName" : "礁溪鄉"},
-{"areaCode" : "G060", "areaName" : "壯圍鄉"},
-{"areaCode" : "G070", "areaName" : "員山鄉"},
-{"areaCode" : "G080", "areaName" : "冬山鄉"},
-{"areaCode" : "G090", "areaName" : "五結鄉"},
-{"areaCode" : "G100", "areaName" : "三星鄉"},
-{"areaCode" : "G110", "areaName" : "大同鄉"},
-{"areaCode" : "G120", "areaName" : "南澳鄉"}]},
+		{
+			"cityCode": "10002000",
+			"cityName": "宜蘭縣",
+			"areas": [{
+				"areaCode": "G010",
+				"areaName": "宜蘭市"
+			}, {
+				"areaCode": "G020",
+				"areaName": "羅東鎮"
+			}, {
+				"areaCode": "G030",
+				"areaName": "蘇澳鎮"
+			}, {
+				"areaCode": "G040",
+				"areaName": "頭城鎮"
+			}, {
+				"areaCode": "G050",
+				"areaName": "礁溪鄉"
+			}, {
+				"areaCode": "G060",
+				"areaName": "壯圍鄉"
+			}, {
+				"areaCode": "G070",
+				"areaName": "員山鄉"
+			}, {
+				"areaCode": "G080",
+				"areaName": "冬山鄉"
+			}, {
+				"areaCode": "G090",
+				"areaName": "五結鄉"
+			}, {
+				"areaCode": "G100",
+				"areaName": "三星鄉"
+			}, {
+				"areaCode": "G110",
+				"areaName": "大同鄉"
+			}, {
+				"areaCode": "G120",
+				"areaName": "南澳鄉"
+			}]
+		},
 
-{"cityCode" : "65000000", "cityName" : "新北市", "areas" : 
-[{"areaCode" : "F010", "areaName" : "板橋區"},
-{"areaCode" : "F020", "areaName" : "三重區"},
-{"areaCode" : "F030", "areaName" : "中和區"},
-{"areaCode" : "F040", "areaName" : "永和區"},
-{"areaCode" : "F050", "areaName" : "新莊區"},
-{"areaCode" : "F060", "areaName" : "新店區"},
-{"areaCode" : "F070", "areaName" : "樹林區"},
-{"areaCode" : "F080", "areaName" : "鶯歌區"},
-{"areaCode" : "F090", "areaName" : "三峽區"},
-{"areaCode" : "F100", "areaName" : "淡水區"},
-{"areaCode" : "F110", "areaName" : "汐止區"},
-{"areaCode" : "F120", "areaName" : "瑞芳區"},
-{"areaCode" : "F130", "areaName" : "土城區"},
-{"areaCode" : "F140", "areaName" : "蘆洲區"},
-{"areaCode" : "F150", "areaName" : "五股區"},
-{"areaCode" : "F160", "areaName" : "泰山區"},
-{"areaCode" : "F170", "areaName" : "林口區"},
-{"areaCode" : "F180", "areaName" : "深坑區"},
-{"areaCode" : "F190", "areaName" : "石碇區"},
-{"areaCode" : "F200", "areaName" : "坪林區"},
-{"areaCode" : "F210", "areaName" : "三芝區"},
-{"areaCode" : "F220", "areaName" : "石門區"},
-{"areaCode" : "F230", "areaName" : "八里區"},
-{"areaCode" : "F240", "areaName" : "平溪區"},
-{"areaCode" : "F250", "areaName" : "雙溪區"},
-{"areaCode" : "F260", "areaName" : "貢寮區"},
-{"areaCode" : "F270", "areaName" : "金山區"},
-{"areaCode" : "F280", "areaName" : "萬里區"},
-{"areaCode" : "F290", "areaName" : "烏來區"}]},
+		{
+			"cityCode": "65000000",
+			"cityName": "新北市",
+			"areas": [{
+				"areaCode": "F010",
+				"areaName": "板橋區"
+			}, {
+				"areaCode": "F020",
+				"areaName": "三重區"
+			}, {
+				"areaCode": "F030",
+				"areaName": "中和區"
+			}, {
+				"areaCode": "F040",
+				"areaName": "永和區"
+			}, {
+				"areaCode": "F050",
+				"areaName": "新莊區"
+			}, {
+				"areaCode": "F060",
+				"areaName": "新店區"
+			}, {
+				"areaCode": "F070",
+				"areaName": "樹林區"
+			}, {
+				"areaCode": "F080",
+				"areaName": "鶯歌區"
+			}, {
+				"areaCode": "F090",
+				"areaName": "三峽區"
+			}, {
+				"areaCode": "F100",
+				"areaName": "淡水區"
+			}, {
+				"areaCode": "F110",
+				"areaName": "汐止區"
+			}, {
+				"areaCode": "F120",
+				"areaName": "瑞芳區"
+			}, {
+				"areaCode": "F130",
+				"areaName": "土城區"
+			}, {
+				"areaCode": "F140",
+				"areaName": "蘆洲區"
+			}, {
+				"areaCode": "F150",
+				"areaName": "五股區"
+			}, {
+				"areaCode": "F160",
+				"areaName": "泰山區"
+			}, {
+				"areaCode": "F170",
+				"areaName": "林口區"
+			}, {
+				"areaCode": "F180",
+				"areaName": "深坑區"
+			}, {
+				"areaCode": "F190",
+				"areaName": "石碇區"
+			}, {
+				"areaCode": "F200",
+				"areaName": "坪林區"
+			}, {
+				"areaCode": "F210",
+				"areaName": "三芝區"
+			}, {
+				"areaCode": "F220",
+				"areaName": "石門區"
+			}, {
+				"areaCode": "F230",
+				"areaName": "八里區"
+			}, {
+				"areaCode": "F240",
+				"areaName": "平溪區"
+			}, {
+				"areaCode": "F250",
+				"areaName": "雙溪區"
+			}, {
+				"areaCode": "F260",
+				"areaName": "貢寮區"
+			}, {
+				"areaCode": "F270",
+				"areaName": "金山區"
+			}, {
+				"areaCode": "F280",
+				"areaName": "萬里區"
+			}, {
+				"areaCode": "F290",
+				"areaName": "烏來區"
+			}]
+		},
 
-{"cityCode" : "10017000", "cityName" : "基隆市", "areas" : 
-[{"areaCode" : "C010", "areaName" : "中正區"},
-{"areaCode" : "C020", "areaName" : "七堵區"},
-{"areaCode" : "C030", "areaName" : "暖暖區"},
-{"areaCode" : "C040", "areaName" : "仁愛區"},
-{"areaCode" : "C050", "areaName" : "中山區"},
-{"areaCode" : "C060", "areaName" : "安樂區"},
-{"areaCode" : "C070", "areaName" : "信義區"}]},
+		{
+			"cityCode": "10017000",
+			"cityName": "基隆市",
+			"areas": [{
+				"areaCode": "C010",
+				"areaName": "中正區"
+			}, {
+				"areaCode": "C020",
+				"areaName": "七堵區"
+			}, {
+				"areaCode": "C030",
+				"areaName": "暖暖區"
+			}, {
+				"areaCode": "C040",
+				"areaName": "仁愛區"
+			}, {
+				"areaCode": "C050",
+				"areaName": "中山區"
+			}, {
+				"areaCode": "C060",
+				"areaName": "安樂區"
+			}, {
+				"areaCode": "C070",
+				"areaName": "信義區"
+			}]
+		},
 
-{"cityCode" : "10008000", "cityName" : "南投縣", "areas" : 
-[{"areaCode" : "M010", "areaName" : "南投市"},
-{"areaCode" : "M020", "areaName" : "埔里鎮"},
-{"areaCode" : "M030", "areaName" : "草屯鎮"},
-{"areaCode" : "M040", "areaName" : "竹山鎮"},
-{"areaCode" : "M050", "areaName" : "集集鎮"},
-{"areaCode" : "M060", "areaName" : "名間鄉"},
-{"areaCode" : "M070", "areaName" : "鹿谷鄉"},
-{"areaCode" : "M080", "areaName" : "中寮鄉"},
-{"areaCode" : "M090", "areaName" : "魚池鄉"},
-{"areaCode" : "M100", "areaName" : "國姓鄉"},
-{"areaCode" : "M110", "areaName" : "水里鄉"},
-{"areaCode" : "M120", "areaName" : "信義鄉"},
-{"areaCode" : "M130", "areaName" : "仁愛鄉"}]},
+		{
+			"cityCode": "10008000",
+			"cityName": "南投縣",
+			"areas": [{
+				"areaCode": "M010",
+				"areaName": "南投市"
+			}, {
+				"areaCode": "M020",
+				"areaName": "埔里鎮"
+			}, {
+				"areaCode": "M030",
+				"areaName": "草屯鎮"
+			}, {
+				"areaCode": "M040",
+				"areaName": "竹山鎮"
+			}, {
+				"areaCode": "M050",
+				"areaName": "集集鎮"
+			}, {
+				"areaCode": "M060",
+				"areaName": "名間鄉"
+			}, {
+				"areaCode": "M070",
+				"areaName": "鹿谷鄉"
+			}, {
+				"areaCode": "M080",
+				"areaName": "中寮鄉"
+			}, {
+				"areaCode": "M090",
+				"areaName": "魚池鄉"
+			}, {
+				"areaCode": "M100",
+				"areaName": "國姓鄉"
+			}, {
+				"areaCode": "M110",
+				"areaName": "水里鄉"
+			}, {
+				"areaCode": "M120",
+				"areaName": "信義鄉"
+			}, {
+				"areaCode": "M130",
+				"areaName": "仁愛鄉"
+			}]
+		},
 
-{"cityCode" : "10016000", "cityName" : "澎湖縣", "areas" : 
-[{"areaCode" : "X010", "areaName" : "馬公市"},
-{"areaCode" : "X020", "areaName" : "湖西鄉"},
-{"areaCode" : "X030", "areaName" : "白沙鄉"},
-{"areaCode" : "X040", "areaName" : "西嶼鄉"},
-{"areaCode" : "X050", "areaName" : "望安鄉"},
-{"areaCode" : "X060", "areaName" : "七美鄉"}]},
+		{
+			"cityCode": "10016000",
+			"cityName": "澎湖縣",
+			"areas": [{
+				"areaCode": "X010",
+				"areaName": "馬公市"
+			}, {
+				"areaCode": "X020",
+				"areaName": "湖西鄉"
+			}, {
+				"areaCode": "X030",
+				"areaName": "白沙鄉"
+			}, {
+				"areaCode": "X040",
+				"areaName": "西嶼鄉"
+			}, {
+				"areaCode": "X050",
+				"areaName": "望安鄉"
+			}, {
+				"areaCode": "X060",
+				"areaName": "七美鄉"
+			}]
+		},
 
-{"cityCode" : "09020000", "cityName" : "金門縣", "areas" : 
-[{"areaCode" : "W010", "areaName" : "金城鎮"},
-{"areaCode" : "W020", "areaName" : "金沙鎮"},
-{"areaCode" : "W030", "areaName" : "金湖鎮"},
-{"areaCode" : "W040", "areaName" : "金寧鄉"},
-{"areaCode" : "W050", "areaName" : "烈嶼鄉"},
-{"areaCode" : "W060", "areaName" : "烏坵鄉"}]},
+		{
+			"cityCode": "09020000",
+			"cityName": "金門縣",
+			"areas": [{
+				"areaCode": "W010",
+				"areaName": "金城鎮"
+			}, {
+				"areaCode": "W020",
+				"areaName": "金沙鎮"
+			}, {
+				"areaCode": "W030",
+				"areaName": "金湖鎮"
+			}, {
+				"areaCode": "W040",
+				"areaName": "金寧鄉"
+			}, {
+				"areaCode": "W050",
+				"areaName": "烈嶼鄉"
+			}, {
+				"areaCode": "W060",
+				"areaName": "烏坵鄉"
+			}]
+		},
 
-{"cityCode" : "09007000", "cityName" : "連江縣", "areas" : 
-[{"areaCode" : "Y010", "areaName" : "南竿鄉"},
-{"areaCode" : "Y020", "areaName" : "北竿鄉"},
-{"areaCode" : "Y030", "areaName" : "莒光鄉"},
-{"areaCode" : "Y040", "areaName" : "東引鄉"}]}]
+		{
+			"cityCode": "09007000",
+			"cityName": "連江縣",
+			"areas": [{
+				"areaCode": "Y010",
+				"areaName": "南竿鄉"
+			}, {
+				"areaCode": "Y020",
+				"areaName": "北竿鄉"
+			}, {
+				"areaCode": "Y030",
+				"areaName": "莒光鄉"
+			}, {
+				"areaCode": "Y040",
+				"areaName": "東引鄉"
+			}]
+		}
+	]
+}
