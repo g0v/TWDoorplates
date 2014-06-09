@@ -175,36 +175,58 @@ loadCityAreaCodesData = ->
       alert("Error loading area codes")
   }
 
+SpinnerOpts = {
+  lines: 11, # The number of lines to draw
+  length: 7, # The length of each line
+  width: 4, # The line thickness
+  radius: 11, # The radius of the inner circle
+  corners: 1, # Corner roundness (0..1)
+  rotate: 0, # The rotation offset
+  direction: 1, # 1: clockwise, -1: counterclockwise
+  color: '#000', # #rgb or #rrggbb or array of colors
+  speed: 1, # Rounds per second
+  trail: 60, # Afterglow percentage
+  shadow: true, # Whether to render a shadow
+  hwaccel: false, # Whether to use hardware acceleration
+  className: 'spinner', # The CSS class to assign to the spinner
+  zIndex: 2e9, # The z-index (defaults to 2000000000)
+  top: '50%', # Top position relative to parent
+  left: '50%' # Left position relative to parent
+}
+
 $(document).ready ->
-  $("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
-    buildDoorplates xhr.responseJSON.rows
-  ).on("ajax:error", (e, xhr, status, error) ->
-    $("#doorplate-list").append $("<div class='jumbotron'><h3>查詢失敗</h3></div>")
-  ).on("ajax:before", ->
-    areas = $("#area-code-selector label.active input").map(->
-      $(this).val()
-    ).toArray().join(",")
-    $("input[name='areaCode']").val(areas)
-  )
-  
-  if localStorage != null
-    if localStorage.twAddrData != undefined
-      #console.log "locaStorage.twAddrData found"
-      buildAddressData()
-    if localStorage.cityAreaCodes != undefined
-      #console.log "localStorage.cityAreaCodes found"
-      buildCityAreaCodesData()
-  
-  if $.twAddrData == undefined || $.twAddrData.Version != "20130406"
-    #console.log "Address data not loaded or Version not match, load from server"
-    loadStreetData()
-  else
-    #console.log "Version checked, bind typeahead"
-    bindStreetTypeahead()
-    
-  if $.cityAreaCodes == undefined || $.cityAreaCodes.Version != "20140517"
-    #console.log "Citi area data not loaded or Version not match, load from server"
-    loadCityAreaCodesData()
-  else
-    #console.log "Version checked, bind typeahead"
-    initAreaButtons()
+	$.spinner = new Spinner(SpinnerOpts).spin()
+	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
+		buildDoorplates xhr.responseJSON.rows
+	).on("ajax:error", (e, xhr, status, error) ->
+		$("#doorplate-list").append $("<div class='jumbotron'><h3>查詢失敗</h3></div>")
+	).on("ajax:before", ->
+		areas = $("#area-code-selector label.active input").map( ->
+			$(this).val()
+		).toArray().join(",")
+		$("input[name='areaCode']").val(areas)
+		$("#doorplate-list").text("").append($.spinner.el)
+	)
+	
+	if localStorage != null
+		if localStorage.twAddrData != undefined
+			#console.log "locaStorage.twAddrData found"
+			buildAddressData()
+		
+		if localStorage.cityAreaCodes != undefined
+			#console.log "localStorage.cityAreaCodes found"
+			buildCityAreaCodesData()
+		
+	if $.twAddrData == undefined || $.twAddrData.Version != "20130406"
+		#console.log "Address data not loaded or Version not match, load from server"
+		loadStreetData()
+	else
+		#console.log "Version checked, bind typeahead"
+		bindStreetTypeahead()
+		
+	if $.cityAreaCodes == undefined || $.cityAreaCodes.Version != "20140517"
+		#console.log "Citi area data not loaded or Version not match, load from server"
+		loadCityAreaCodesData()
+	else
+		#console.log "Version checked, bind typeahead"
+		initAreaButtons()
