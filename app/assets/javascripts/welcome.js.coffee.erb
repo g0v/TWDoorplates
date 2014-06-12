@@ -199,13 +199,13 @@ $(document).ready ->
 	$("#doorplate-search-form").on("ajax:success", (e, data, status, xhr) ->
 		buildDoorplates xhr.responseJSON.rows
 	).on("ajax:error", (e, xhr, status, error) ->
-		$("#doorplate-list").append $("<div class='jumbotron'><h3>查詢失敗</h3></div>")
+		$("#doorplate-list").empty().append $("<div class='jumbotron'><h3>查詢失敗</h3></div>")
 	).on("ajax:before", ->
 		areas = $("#area-code-selector label.active input").map( ->
 			$(this).val()
 		).toArray().join(",")
 		$("input[name='areaCode']").val(areas)
-		$("#doorplate-list").text("").append($.spinner.el)
+		$("#doorplate-list").empty().append($.spinner.el)
 	)
 	
 	if localStorage != null
