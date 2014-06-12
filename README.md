@@ -17,7 +17,7 @@ Components used by this project:
 * [Bootstrappers](https://github.com/xdite/bootstrappers) by [@xdite](https://github.com/xdite)
 * [Basic jQuery Slider](https://github.com/jcobb/basic-jquery-slider/) by [@jcobb](https://github.com/jcobb)
 * [jQuery BlockUI](https://github.com/malsup/blockui/) by [@malsup](https://github.com/malsup)
-
+* The street data for autocomplete come from [twAddrHelper](https://github.com/darkthread/twAddrHelper) by [@darkthread](https://github.com/darkthread)
 
 ## Copyright and License ##
 Copyright © 2014 Shiva Huang.
