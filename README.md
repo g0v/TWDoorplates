@@ -5,6 +5,9 @@
 ## Getting Started ##
 [http://twdoorplates.herokuapp.com](http://twdoorplates.herokuapp.com)
 
+## Data source ##
+This project is an interface to search on [內政部戶政司 (Department of Household Registration, M.O.I.)](http://www.ris.gov.tw) and **ALL** the results come from it.
+
 ## Credits ##
 TWDoorplates is maintained by [@ShivaHuang](http://github.com/ShivaHuang)
 
