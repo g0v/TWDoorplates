@@ -32,18 +32,22 @@ class DoorplatesController < ApplicationController
   private
   
   def query(queryParams)
-    uri = URI("http://www.ris.gov.tw/swpro/doorplate.do?getDoorplateByDoorplate")
+    uri = URI("http://www.ris.gov.tw/doorplateX/doorplateQuery")
     https = Net::HTTP.new(uri.host, uri.port)
     https.use_ssl = false
     
+    timeOffset = 1417695506671
+    
     @cityCode = queryParams[:cityCode]
     @areaCode = queryParams[:areaCode]
-    @adminCode = @cityCode[0, 5] + @areaCode[1, 3] unless @cityCode.nil? || @cityCode.empty? || @areaCode.nil? || @areaCode.empty?
+    queryParams[:areaCode] = @cityCode[0, 5] + @areaCode[1, 3] unless @cityCode.nil? || @cityCode.empty? || @areaCode.nil? || @areaCode.empty?
     
-    defaultParams = {:getDoorplateByDoorplate => nil, :adminCode => @adminCode, :tk => (Time.now.to_f*1000).to_i, :tks => 0}
+    defaultParams = {:searchType => :doorplate, :datagrid_search_status_2 => :true, :getDoorplateByDoorplate => nil, :tkt => (Time.now.to_f*1000).to_i-timeOffset, :tks => 1}
 
     body = URI.encode_www_form(defaultParams.merge(queryParams))
-
+    
+    #logger.debug body
+    
     response = https.post(uri.path, body)
     @result = JSON.parse(response.body)
   end
