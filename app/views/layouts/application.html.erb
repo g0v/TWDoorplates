@@ -3,6 +3,9 @@
 <head>
   <%= render_page_title %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--[if lt IE 9]>
+	  <%= stylesheet_link_tag "gh-fork-ribbon.ie", media: 'all' %>
+  <![endif]-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= yield :stylesheets %>
@@ -19,6 +22,12 @@
 		  <%= yield %>
 		  
       </div>
+  </div>
+  
+  <div class="github-fork-ribbon-wrapper right-bottom">
+	  <div class="github-fork-ribbon">
+		  <a href="https://github.com/g0v/TWDoorplates">Fork me on GitHub</a>
+	  </div>
   </div>
 
   <%= yield :javascripts %>
