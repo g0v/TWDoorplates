@@ -36,7 +36,7 @@ class DoorplatesController < ApplicationController
     https = Net::HTTP.new(uri.host, uri.port)
     https.use_ssl = false
     
-    timeOffset = 1417695506671
+    timeOffset = 1419431692844
     
     @cityCode = queryParams[:cityCode]
     @areaCode = queryParams[:areaCode]
