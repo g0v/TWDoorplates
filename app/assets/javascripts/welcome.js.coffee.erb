@@ -217,14 +217,14 @@ $(document).ready ->
 			#console.log "localStorage.cityAreaCodes found"
 			buildCityAreaCodesData()
 		
-	if $.twAddrData == undefined || $.twAddrData.Version != "20130406"
+	if $.twAddrData == undefined || $.twAddrData.Version != "20150105"
 		#console.log "Address data not loaded or Version not match, load from server"
 		loadStreetData()
 	else
 		#console.log "Version checked, bind typeahead"
 		bindStreetTypeahead()
 		
-	if $.cityAreaCodes == undefined || $.cityAreaCodes.Version != "20140517"
+	if $.cityAreaCodes == undefined || $.cityAreaCodes.Version != "20150105"
 		#console.log "Citi area data not loaded or Version not match, load from server"
 		loadCityAreaCodesData()
 	else
