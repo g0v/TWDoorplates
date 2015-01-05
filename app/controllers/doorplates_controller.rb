@@ -36,13 +36,12 @@ class DoorplatesController < ApplicationController
     https = Net::HTTP.new(uri.host, uri.port)
     https.use_ssl = false
     
-    timeOffset = 1419431692844
-    
     @cityCode = queryParams[:cityCode]
     @areaCode = queryParams[:areaCode]
     queryParams[:areaCode] = @cityCode[0, 5] + @areaCode[1, 3] unless @cityCode.nil? || @cityCode.empty? || @areaCode.nil? || @areaCode.empty?
+    @tkt = JSON.parse(https.post(uri.path, nil).body)["tkt"]
     
-    defaultParams = {:searchType => :doorplate, :datagrid_search_status_2 => :true, :getDoorplateByDoorplate => nil, :tkt => (Time.now.to_f*1000).to_i-timeOffset, :tks => 1}
+    defaultParams = {:searchType => :doorplate, :datagrid_search_status_2 => :true, :getDoorplateByDoorplate => nil, :tkt => @tkt, :tks => 1}
 
     body = URI.encode_www_form(defaultParams.merge(queryParams))
     
