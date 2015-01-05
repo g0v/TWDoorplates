@@ -1,5 +1,5 @@
 {
-	"Version": "20140517",
+	"Version": "20150105",
 	"Data": [{
 			"cityCode": "63000000",
 			"cityName": "臺北市",
@@ -43,47 +43,47 @@
 		},
 
 		{
-			"cityCode": "10003000",
-			"cityName": "桃園縣",
+			"cityCode": "68000000",
+			"cityName": "桃園區",
 			"areas": [{
 				"areaCode": "H010",
-				"areaName": "桃園市"
+				"areaName": "桃園區"
 			}, {
 				"areaCode": "H020",
-				"areaName": "中壢市"
+				"areaName": "中壢區"
 			}, {
 				"areaCode": "H030",
-				"areaName": "大溪鎮"
+				"areaName": "大溪區"
 			}, {
 				"areaCode": "H040",
-				"areaName": "楊梅市"
+				"areaName": "楊梅區"
 			}, {
 				"areaCode": "H050",
-				"areaName": "蘆竹鄉"
+				"areaName": "蘆竹區"
 			}, {
 				"areaCode": "H060",
-				"areaName": "大園鄉"
+				"areaName": "大園區"
 			}, {
 				"areaCode": "H070",
-				"areaName": "龜山鄉"
+				"areaName": "龜山區"
 			}, {
 				"areaCode": "H080",
-				"areaName": "八德市"
+				"areaName": "八德區"
 			}, {
 				"areaCode": "H090",
-				"areaName": "龍潭鄉"
+				"areaName": "龍潭區"
 			}, {
 				"areaCode": "H100",
-				"areaName": "平鎮市"
+				"areaName": "平鎮區"
 			}, {
 				"areaCode": "H110",
-				"areaName": "新屋鄉"
+				"areaName": "新屋區"
 			}, {
 				"areaCode": "H120",
-				"areaName": "觀音鄉"
+				"areaName": "觀音區"
 			}, {
 				"areaCode": "H130",
-				"areaName": "復興鄉"
+				"areaName": "復興區"
 			}]
 		},
 
