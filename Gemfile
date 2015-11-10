@@ -53,3 +53,4 @@ gem 'spring',        group: :development
 
 gem 'number_to_cn', :git => "https://github.com/ShivaHuang/number_to_zh.git"
 
+gem 'meta-tags'
